@@ -23,7 +23,7 @@
 * Some boards offer a separate external TTL UART connector
 
 **Connection signal tower**
-A suitable circuit can be built with the DiY Protokit.
+* A suitable circuit can be built with the DiY Protokit.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
 
 

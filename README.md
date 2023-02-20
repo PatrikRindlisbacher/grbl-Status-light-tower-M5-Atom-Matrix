@@ -18,6 +18,10 @@
 * Look for 3.3V or 5V levels depending on the board.
 * Depending on the board, the 5V can also be plugged in directly on the CNC board.
 
+**Selection of the UART**
+* If you don't use the USB port, you can use RX & TX directly on the controller.
+* Some boards offer a separate external TTL UART connector
+
 **used libraries**
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
 * FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome

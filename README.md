@@ -11,9 +11,7 @@
 * Shown 3 Status on the Light-Tower (still at work)
 
 **Connect**
-
 <img width="223" alt="image" src="https://user-images.githubusercontent.com/39780457/220160670-0b9d1765-2e1e-4385-9f77-221070fcda38.png">
-
 * Connect RX to TX and TX to RX (M5 crossed to CNC)
 * Look for 3.3V or 5V Input / Output levels depending on the board.
 * Depending on the board, the 5V can also be plugged in directly on the CNC board.
@@ -25,7 +23,6 @@
 **Connection signal tower**
 * A suitable circuit can be built with the DiY Protokit.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
-
 
 **used libraries**
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome

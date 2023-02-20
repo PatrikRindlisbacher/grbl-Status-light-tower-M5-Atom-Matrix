@@ -16,3 +16,5 @@
 **used libraries**
 
 M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
+FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
+

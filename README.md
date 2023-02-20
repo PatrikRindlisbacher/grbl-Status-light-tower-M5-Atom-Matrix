@@ -2,7 +2,7 @@
 
 
 **Flow of functions:**
-* continuous sending of character ?
+* continuous sending of character ? to CNC Controller
 * receive all messages from CNC controller
 * Message type recognition
 * parse message

@@ -7,8 +7,9 @@
 * Message type recognition
 * parse message Contents
 * Provide all values in variables
-* Shown **10 Status** on the display of the Atom Matrix (Colors & Letters)
+* Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
 * Shown 3 Status on the Light-Tower (still at work)
+* Status: Idle, Run, Jog, Homing, Hold, Alarm, Door, Sleep
 
 **Connect**
 

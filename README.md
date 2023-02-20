@@ -7,7 +7,7 @@
 * Message type recognition
 * parse message
 * Provide all values in variables
-* Shown 10 Status on the display of the Atom Matrix
+* Shown **10 Status** on the display of the Atom Matrix (Colors & Letters)
 * Shown 3 Status on the Light-Tower (still at work)
 
 **Connect**

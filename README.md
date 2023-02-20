@@ -7,4 +7,5 @@ Flow of functions:
 * Message type recognition
 * parse message
 * Provide all values in variables
-* Shown on the display of the Atom Matrix
+* Shown Status on the display of the Atom Matrix
+* Shown Status on the Light-Tower

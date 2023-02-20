@@ -26,7 +26,7 @@
 * I will publish a circuit proposal shortly.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
  
-**used libraries (Visual Studio Code & Platform IO**
+**used libraries (Visual Studio Code & PlatformIO)**
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
 * FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
 

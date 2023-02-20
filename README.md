@@ -2,9 +2,9 @@
 
 Flow of functions:
 
-continuous sending of character ?
-receive all messages from CNC controller
-Message type recognition
-parse message
-Provide all values in variables
-Shown on the display of the Atom Matrix
+* continuous sending of character ?
+* receive all messages from CNC controller
+* Message type recognition
+* parse message
+* Provide all values in variables
+* Shown on the display of the Atom Matrix

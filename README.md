@@ -31,6 +31,7 @@
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
 * FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
 
-I am happy about every reaction in the issues or pull request.
+The code is easily ported to any Arduino board with hardware UART.
 
+I am happy about every reaction in the issues or pull request.
 I will write detailed instructions in the next few days. "WIKI"

@@ -20,3 +20,4 @@ Connect RX to TX and TX to RX
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
 * FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
 
+I am happy about every reaction in the issue or pull request.

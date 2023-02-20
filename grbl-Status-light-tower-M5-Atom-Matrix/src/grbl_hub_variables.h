@@ -28,16 +28,10 @@ enum class Message_Type : uint8_t {
   startup,        // >G54G20:ok : The open chevron indicates startup line execution. The :ok suffix shows it executed correctly without adding an unmatched ok response on a new line.
 };
 
-// Response Messages: Normal send command and execution response acknowledgement. Used for streaming.
-
-// ok : Indicates that the command line received was parsed and executed (or set to be executed).
-// error:x : Indicates that the command line received contained an error, with an error code x, and was purged. See the error code section below for definitions.
-
-
 struct raw_uart_cnc_read_t {                                                                      // Alle Status Variablen 
   String  Message = "";   
   boolean Message_Available = false;
-  Message_Type Message_Typ = Message_Type::none;                                                             // If a complete string received from GRBL
+  Message_Type Message_Typ = Message_Type::none;                                                  // If a complete string received from GRBL
   uint32_t last_char_reveive_millis = 0;                                                          // Last Char receive
   uint32_t last_string_reveive_millis = 0;                                                        // Last String receive
   uint32_t last_grbl_status_update =0;
@@ -45,28 +39,8 @@ struct raw_uart_cnc_read_t {                                                    
   bool heart_beat_last = false;
  } uart_cnc_read_raw ;
 
-
-struct Maschine_State_t {                                                                     // Maschine Status Information
+struct Maschine_State_t {                                                                         // Maschine Status Information
   State State_current = State::Sleep;
-  State State_old = State::Sleep;                                                               // Maschine State Number
+  State State_old = State::Sleep;                                                                 // Maschine State Number
   String  Machine_State_String = "";                                                              // Maschine State Text
 }Maschine_State ;
-
-struct axis_1_pos_information_t {                                                                 // Axis 1 --> normally X
-  String  designation = "X";
-  float MPos = 0.00;
-  float WPos = 0.00;
-}axis_1_pos_information ;
-
-struct axis_2_pos_information_t {                                                                 // Axis 1 --> normally Y
-  String  designation = "Y";
-  float MPos = 0.00;
-  float WPos = 0.00;
-}axis_2_pos_information ;
-
-struct axis_3_pos_information_t {                                                                 // Axis 1 --> normally X
-  String  designation = "Z";
-  float MPos = 0.00;
-  float WPos = 0.00;
-}axis_3_pos_information ;
-

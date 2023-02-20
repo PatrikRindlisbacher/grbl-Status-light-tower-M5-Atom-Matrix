@@ -2,9 +2,9 @@
 #include "M5Atom.h"
 
 void m5_atom_matrix_setup() {
-    M5.begin(true, false, true);  // Init Atom-Matrix(Initialize serial port, LED).  初始化
-    delay(50);                    // delay 50ms.  延迟50ms
-    M5.dis.drawpix(12, 0xffffff);  // Light the LED with the specified RGB color
+    M5.begin(true, false, true);      // Init Atom-Matrix(Initialize serial port, LED).  
+    delay(50);                        // delay 50ms. 
+    M5.dis.drawpix(12, 0xffffff);     // Light the LED with the specified RGB color
     delay(200); 
 }
 

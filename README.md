@@ -5,7 +5,7 @@
 * continuous sending of character ? to CNC Controller
 * receive all messages from CNC controller
 * Message type recognition
-* parse message
+* parse message Contents
 * Provide all values in variables
 * Shown **10 Status** on the display of the Atom Matrix (Colors & Letters)
 * Shown 3 Status on the Light-Tower (still at work)

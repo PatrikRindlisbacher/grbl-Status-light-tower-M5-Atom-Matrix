@@ -14,8 +14,8 @@
 
 <img width="223" alt="image" src="https://user-images.githubusercontent.com/39780457/220160670-0b9d1765-2e1e-4385-9f77-221070fcda38.png">
 
-Connect RX to TX and TX to RX
-Depending on the board, the 5V can also be plugged in directly on the CNC board.
+* Connect RX to TX and TX to RX
+* Depending on the board, the 5V can also be plugged in directly on the CNC board.
 
 **used libraries**
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome

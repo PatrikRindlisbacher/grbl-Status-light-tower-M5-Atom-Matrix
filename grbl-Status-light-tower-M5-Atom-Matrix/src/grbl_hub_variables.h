@@ -28,7 +28,6 @@ enum class Message_Type : uint8_t {
   startup,            // >G54G20:ok : The open chevron indicates startup line execution. The :ok suffix shows it executed correctly without adding an unmatched ok response on a new line.
 };
 
-
 //******************************** R A W   D A T A  G R B L  M E S S A G E  **********************//
 struct raw_uart_cnc_read_t {                                                                      // Alle Status Variablen 
   String  Message = "";   
@@ -50,16 +49,16 @@ struct Maschine_State_t {                                                       
 
 // --------------------------------- L I G H T  T O W E R ---------------------------------------//
 //*************************** L I G H T  T O W E R  L A M P  M O D E  ***************************//
-enum class Light_Tower_Lamp_Mode : uint8_t {
-    off = 0,            // lamp ist off
-    on ,                // lamp ist on
-    blinking,           // lamp ist blinking
-    flashing,           // lamp ist flashing
+enum class Lamp_LED_Mode : uint8_t {
+    off = 0,            // lamp / LED  is off
+    on ,                // lamp / LED  is on
+    blinking,           // lamp / LED  is blinking
+    flashing,           // lamp / LED  is flashing
 };
 
 //******************************** L I G H T  T O W E R   S T A E  *******************************//
 struct light_tower_Status_t {                                // Light Tower Status 
-  Light_Tower_Lamp_Mode red_lamp;
-  Light_Tower_Lamp_Mode orange_lamp;
-  Light_Tower_Lamp_Mode green_lamp;
+  Lamp_LED_Mode red_lamp;
+  Lamp_LED_Mode orange_lamp;
+  Lamp_LED_Mode green_lamp;
 } light_tower_Status ;

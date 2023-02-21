@@ -66,10 +66,10 @@ struct light_tower_Status_t {                                // Light Tower Stat
 
 //******************************** BLINK & Flash  *******************************//
 struct blink_and_flash_t {                         // All blink_and_flash vars 
-  uint32_t blink_duration_on=1000;
-  uint32_t blink_duration_off=1000; 
-  uint32_t flash_duration_on=200;
-  uint32_t flash_duration_off=1800; 
+  uint32_t blink_duration_on = 1000;
+  uint32_t blink_duration_off = 1000; 
+  uint32_t flash_duration_on = 100;
+  uint32_t flash_duration_off = 1900; 
   uint32_t last_blink_start_millis = 0;             // 
   uint32_t last_flash_start_millis = 0;             //
  } blink_and_flash ;

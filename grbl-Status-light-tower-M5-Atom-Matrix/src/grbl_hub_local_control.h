@@ -2,24 +2,24 @@
 
 // **********************  T I M E R  F O R  B L I N K  & F L A S H **********************//
 bool GPIO_state_blink(){
-  if ( millis() > blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on + blink_and_flash.blink_duration_on){
+  if ( millis() > blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on + blink_and_flash.blink_duration_off){
     blink_and_flash.last_blink_start_millis= millis();
-    return HIGH
+    return HIGH;
   }
   if (millis() < blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on){
-    return HIGH
+    return HIGH;
   }
   else {
     return LOW;
   }
 }
 bool GPIO_state_flash(){
-  if ( millis() > blink_and_flash.last_flash_start_millis+ blink_and_flash.flash_duration_on + blink_and_flash.flash_duration_on){
+  if ( millis() > blink_and_flash.last_flash_start_millis + blink_and_flash.flash_duration_on + blink_and_flash.flash_duration_off){
     blink_and_flash.last_flash_start_millis= millis();
-    return HIGH
+    return HIGH;
   }
   if (millis() < blink_and_flash.last_flash_start_millis + blink_and_flash.flash_duration_on){
-    return HIGH
+    return HIGH;
   }
   else {
     return LOW;
@@ -35,13 +35,13 @@ bool current_GPIO_Output_State(GPIO_Output_Mode GPIO_Mode){
     return HIGH;
   }
   else if (GPIO_Mode == GPIO_Output_Mode::blinking){
-    return HIGH;
+    return GPIO_state_blink();
   }
   else if (GPIO_Mode == GPIO_Output_Mode::flashing){
-    return GPIO_state_flash;
+    return GPIO_state_flash();
   }
   else {
-    return GPIO_state_blink;
+    return LOW;
   }
 }
 

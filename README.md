@@ -3,7 +3,7 @@
 
 **I'll be working a lot on this project over the next few days. Watch this project in a few days**
 
-**ALL functions are ready for testing !!!!**
+**ALL basic functions are ready for testing !!!!**
 
 **Flow of functions:**
 * continuous sending of character ? to CNC Controller

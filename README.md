@@ -3,6 +3,8 @@
 
 **I'll be working a lot on this project over the next few days. Watch this project in a few days**
 
+**ALL functions are ready for testing !!!!**
+
 **Flow of functions:**
 * continuous sending of character ? to CNC Controller
 * receive all Status messages from CNC controller
@@ -10,8 +12,8 @@
 * parse message Contents
 * Provide all values in variables
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
-* Shown 3 (or more) Status on the Light-Tower (still at work)
-* Each LED has 4 modes: OFF, ON, Blinking, Flashing. (still at work)
+* Shown 3 (or more) Status on the Light-Tower 
+* Each LED has 4 modes: OFF, ON, Blinking, Flashing. 
 
 **Signal Light Tower by default**
 * Idle = green on

@@ -13,16 +13,16 @@ void uart_cnc_read(){                                                           
     char MinChar = (char)Serial2.read();                                                          // Char received from from CNC Board 
     uart_cnc_read_raw.last_char_reveive_millis = millis();                                        // notice millis from Last Char received 
     Serial.write(MinChar);                                                                        // Passtrouh form CNC to UART USB
-    if (MinChar == '\n'){
-      uart_cnc_read_raw.Message_Available = true;
-    }
-    else{
+    if (MinChar == '\n'){                                                                         // end of message
+      uart_cnc_read_raw.Message_Available = true;                                                 // new message are available
+    }                                                                                             //
+    else{                                                                                         //
       if (MinChar >= ' ') {uart_cnc_read_raw.Message += MinChar;}                                 // >= ' ' to avoid not wanted ctrl char.
-    }
-  }
+    }                                                                                             //
+  }                                                                                               //
 }
 //************************************  R E A D   U A R T   U S B ********************************//
-void uart_usb_read(){
+void uart_usb_read(){                                                                             // read data from USB
   while (Serial.available()) {                                                                    // If Data available
     Serial2.print(char(Serial.read()));                                                           // Passtrouh form USB to CNC
   }

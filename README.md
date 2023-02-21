@@ -10,8 +10,8 @@
 * parse message Contents
 * Provide all values in variables
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
-* Shown 3 (or more) Status on the Light-Tower (still at work)
-* Each LED has 4 modes: OFF, ON, Blinking, Flashing. (still at work)
+* Shown 3 (or more) Status on the Light-Tower 
+* Each LED has 4 modes: OFF, ON, Blinking, Flashing. 
 
 **Signal Light Tower by default**
 * Idle = green on

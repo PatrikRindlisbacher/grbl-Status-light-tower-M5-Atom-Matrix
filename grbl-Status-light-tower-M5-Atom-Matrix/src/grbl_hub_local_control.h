@@ -1,8 +1,13 @@
 #include <Arduino.h>
 
 // **********************  T I M E R  F O R  B L I N K  & F L A S H **********************//
-void update_blink_and_flash(){
-
+bool GPIO_state_blink(){
+  // Install pending timer
+  return HIGH;
+}
+bool GPIO_state_flash(){
+  //Install pending timer
+  return HIGH;
 }
 
 // **********************  Determine current GPIO state **********************//
@@ -17,10 +22,10 @@ bool current_GPIO_Output_State(GPIO_Output_Mode GPIO_Mode){
     return HIGH;
   }
   else if (GPIO_Mode == GPIO_Output_Mode::flashing){
-    return HIGH;
+    return GPIO_state_flash;
   }
   else {
-    return LOW;
+    return GPIO_state_blink;
   }
 }
 

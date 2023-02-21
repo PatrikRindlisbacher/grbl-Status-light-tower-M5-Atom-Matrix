@@ -2,12 +2,28 @@
 
 // **********************  T I M E R  F O R  B L I N K  & F L A S H **********************//
 bool GPIO_state_blink(){
-  // Install pending timer
-  return HIGH;
+  if ( millis() > blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on + blink_and_flash.blink_duration_on){
+    blink_and_flash.last_blink_start_millis= millis();
+    return HIGH
+  }
+  if (millis() < blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on){
+    return HIGH
+  }
+  else {
+    return LOW;
+  }
 }
 bool GPIO_state_flash(){
-  //Install pending timer
-  return HIGH;
+  if ( millis() > blink_and_flash.last_flash_start_millis+ blink_and_flash.flash_duration_on + blink_and_flash.flash_duration_on){
+    blink_and_flash.last_flash_start_millis= millis();
+    return HIGH
+  }
+  if (millis() < blink_and_flash.last_flash_start_millis + blink_and_flash.flash_duration_on){
+    return HIGH
+  }
+  else {
+    return LOW;
+  }
 }
 
 // **********************  Determine current GPIO state **********************//

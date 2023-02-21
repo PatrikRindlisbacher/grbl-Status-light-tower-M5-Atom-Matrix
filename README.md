@@ -5,7 +5,7 @@
 
 **ALL basic functions are ready for testing !!!!**
 
-**Flow of functions:**
+**Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller
 * receive all Status messages from CNC controller
 * Message type recognition

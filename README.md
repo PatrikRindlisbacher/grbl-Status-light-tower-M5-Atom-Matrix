@@ -19,7 +19,7 @@
  
 **Selection of the UART**
 * If you don't use the USB port, you can use RX & TX directly on the controller.
-* Some boards offer a separate external TTL UART connector (eg FluidNC)
+* Some boards / Firmwares offer a separate external TTL UART connector (eg FluidNC)
  
 **Connection signal tower**
 * A suitable circuit can be built with the DiY Protokit. (or similar)

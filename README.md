@@ -1,5 +1,6 @@
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">
 
+**I'll be working a lot on this project over the next few days. An observation is worthwhile.**
 
 **Flow of functions:**
 * continuous sending of character ? to CNC Controller

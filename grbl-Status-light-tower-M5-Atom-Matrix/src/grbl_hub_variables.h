@@ -47,13 +47,13 @@ struct Maschine_State_t {                                                       
   String  Machine_State_String = "";                                                              // Maschine State Text
 }Maschine_State ;
 
-// --------------------------------- L I G H T  T O W E R ---------------------------------------//
-//*************************** L I G H T  T O W E R  L A M P  M O D E  ***************************//
+
+//*************************** G P I O  O U T P U T   M O D E  ***************************//
 enum class GPIO_Output_Mode : uint8_t {
-    off = 0,            // lamp / LED  is off
-    on ,                // lamp / LED  is on
-    blinking,           // lamp / LED  is blinking
-    flashing,           // lamp / LED  is flashing
+    off = 0,                              // GPIO / lamp / LED  is off
+    on ,                                  // GPIO / lamp / LED  is on
+    blinking,                             // GPIO / lamp / LED  is blinking
+    flashing,                             // GPIO / lamp / LED  is flashing
 };
 
 //******************************** L I G H T  T O W E R   S T A T E  *******************************//

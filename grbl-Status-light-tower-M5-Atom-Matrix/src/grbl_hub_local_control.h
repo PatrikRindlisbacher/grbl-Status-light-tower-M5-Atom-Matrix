@@ -6,15 +6,38 @@ void update_blink_and_flash(){
 }
 
 // **********************  Determine current GPIO state **********************//
-
-bool current_GPIO_Output_State(){
-
+bool current_GPIO_Output_State(GPIO_Output_Mode GPIO_Mode){
+  if (GPIO_Mode == GPIO_Output_Mode::off){
+    return LOW;
+  }
+  else if (GPIO_Mode == GPIO_Output_Mode::on){
+    return HIGH;
+  }
+  else if (GPIO_Mode == GPIO_Output_Mode::blinking){
+    return HIGH;
+  }
+  else if (GPIO_Mode == GPIO_Output_Mode::flashing){
+    return HIGH;
+  }
+  else {
+    return LOW;
+  }
 }
 
 // *************************** L O C A L  G P I O   U P D A T E  *************************//
 void grbl_status_to_gpio_update(){
-  if (grbl_hub_config.pin_Light_Tower_red !=0){                                                             // if defines the connection for MIST Gpio Output
-    digitalWrite(grbl_hub_config.pin_Light_Tower_red, HIGH);          //
+  bool GPIO_New_State;
+  if (grbl_hub_config.pin_Light_Tower_red !=0){                         // Light Tower RED                                                        // if defines the connection for MIST Gpio Output
+    GPIO_New_State = current_GPIO_Output_State(light_tower_Status.red_lamp);
+    digitalWrite(grbl_hub_config.pin_Light_Tower_red, GPIO_New_State);  //
+  }
+  if (grbl_hub_config.pin_Light_Tower_orange !=0){                         // Light Tower Oragnge                                                        // if defines the connection for MIST Gpio Output
+    GPIO_New_State = current_GPIO_Output_State(light_tower_Status.orange_lamp);
+    digitalWrite(grbl_hub_config.pin_Light_Tower_orange, GPIO_New_State);  //
+  }
+  if (grbl_hub_config.pin_Light_Tower_green !=0){                         // Light Tower Green                                                        // if defines the connection for MIST Gpio Output
+    GPIO_New_State = current_GPIO_Output_State(light_tower_Status.green_lamp);
+    digitalWrite(grbl_hub_config.pin_Light_Tower_green, GPIO_New_State);  //
   }
 }
 

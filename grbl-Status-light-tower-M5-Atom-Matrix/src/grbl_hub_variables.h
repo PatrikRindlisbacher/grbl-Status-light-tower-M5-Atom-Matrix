@@ -59,7 +59,7 @@ enum class Light_Tower_Lamp_Mode : uint8_t {
 
 //******************************** L I G H T  T O W E R   S T A E  *******************************//
 struct light_tower_Status_t {                                // Light Tower Status 
-  uint8_t red_mode;
-  uint8_t orange_mode;
-  uint8_t green_mode;
+  Light_Tower_Lamp_Mode red_lamp;
+  Light_Tower_Lamp_Mode orange_lamp;
+  Light_Tower_Lamp_Mode green_lamp;
 } light_tower_Status ;

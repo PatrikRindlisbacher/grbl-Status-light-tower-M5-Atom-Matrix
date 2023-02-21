@@ -8,7 +8,7 @@
 * parse message Contents
 * Provide all values in variables
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
-* Shown 3 Status on the Light-Tower (still at work)
+* Shown 3 (or more) Status on the Light-Tower (still at work)
 * Status: Idle, Run, Jog, Homing, Hold, Alarm, Door, Sleep
 * Each LED has 4 modes: OFF, ON, Blinking, Flashing. (still at work)
 

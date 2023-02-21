@@ -7,10 +7,10 @@ void light_tower_status_update(){
     light_tower_Status.orange_lamp=GPIO_Output_Mode::off;
     light_tower_Status.green_lamp=GPIO_Output_Mode::on;
   }
-  else if (Maschine_State.State_current== State::Alarm){          // Alarm = red on
-    light_tower_Status.red_lamp=GPIO_Output_Mode::on;
-    light_tower_Status.orange_lamp=GPIO_Output_Mode::blinking;
-    light_tower_Status.green_lamp=GPIO_Output_Mode::flashing;    
+  else if (Maschine_State.State_current== State::Alarm){          // Alarm = red flashing
+    light_tower_Status.red_lamp=GPIO_Output_Mode::flashing;
+    light_tower_Status.orange_lamp=GPIO_Output_Mode::off;
+    light_tower_Status.green_lamp=GPIO_Output_Mode::off;    
   }
   else if (Maschine_State.State_current== State::CheckMode){      // Checkmode = red blinking
     light_tower_Status.red_lamp=GPIO_Output_Mode::blinking;

@@ -24,6 +24,7 @@ void loop() {                                                    // Loop
   uart_cnc_read();                                               // read data from CNC Uart
   grbl_Message_main_parser();                                    // Parse GRBL all GRBL Status information's
   m5_atom_matrix_update();                                       // Update the M5 Matrix Display
-  grbl_staus_to_gpio_update();                                   // Update Local Output Pins
+  light_tower_status_update();                                   // Update the Light Tower Status Veriables
+  grbl_status_to_gpio_update();                                  // Update Local Output Pins
 }
 

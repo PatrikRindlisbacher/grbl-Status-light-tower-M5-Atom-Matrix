@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 // ************************** L I G H T  T O W E R  S T A T U S  *************************//
-void light_tower_staus_update(){
+void light_tower_status_update(){
   if (Maschine_State.State_current== State::Idle){                // Idle = green on
     light_tower_Status.red_lamp=Light_Tower_Lamp_Mode::off;
     light_tower_Status.orange_lamp=Light_Tower_Lamp_Mode::off;

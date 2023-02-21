@@ -3,7 +3,7 @@
 
 **Flow of functions:**
 * continuous sending of character ? to CNC Controller
-* receive all messages from CNC controller
+* receive all Status messages from CNC controller
 * Message type recognition
 * parse message Contents
 * Provide all values in variables
@@ -19,7 +19,7 @@
  
 **Selection of the UART**
 * If you don't use the USB port, you can use RX & TX directly on the controller.
-* Some boards offer a separate external TTL UART connector
+* Some boards offer a separate external TTL UART connector (eg FluidNC)
  
 **Connection signal tower**
 * A suitable circuit can be built with the DiY Protokit. (or similar)

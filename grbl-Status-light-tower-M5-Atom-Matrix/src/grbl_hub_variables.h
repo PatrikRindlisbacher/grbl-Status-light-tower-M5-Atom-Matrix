@@ -1,16 +1,16 @@
 #include <Arduino.h>
 //******************************** G R B L  M A S C H I N E  S T A T U S *****************//
 enum class State : uint8_t {
-    Idle = 0,         // I Green Must be zero.
-    Alarm,            // A Red   In alarm state. Locks out all g-code processes. Allows settings access.
-    CheckMode,        // C G-code check mode. Locks out planner and motion only.
-    Homing,           // H Performing homing cycle
-    Run,              // R orange Cycle is running or motions are being executed.
-    Hold,             // H Active feed hold
-    Jog,              // J Jogging mode.
-    SafetyDoor,       // D Safety door is ajar. Feed holds and de-energizes system.
-    Sleep,            // S Sleep state.
-    ConfigAlarm,      // A You can't do anything but fix your config file.
+  Idle = 0,           // I Green Must be zero.
+  Alarm,              // A Red   In alarm state. Locks out all g-code processes. Allows settings access.
+  CheckMode,          // C G-code check mode. Locks out planner and motion only.
+  Homing,             // H Performing homing cycle
+  Run,                // R orange Cycle is running or motions are being executed.
+  Hold,               // H Active feed hold
+  Jog,                // J Jogging mode.
+  SafetyDoor,         // D Safety door is ajar. Feed holds and de-energizes system.
+  Sleep,              // S Sleep state.
+  ConfigAlarm,        // A You can't do anything but fix your config file.
 };
 //******************************** G R B L  M E S S A G E  T Y P E  *********************//
 enum class Message_Type : uint8_t {
@@ -49,16 +49,16 @@ struct Maschine_State_t {                                                       
 
 // --------------------------------- L I G H T  T O W E R ---------------------------------------//
 //*************************** L I G H T  T O W E R  L A M P  M O D E  ***************************//
-enum class Lamp_LED_Mode : uint8_t {
+enum class GPIO_Output_Mode : uint8_t {
     off = 0,            // lamp / LED  is off
     on ,                // lamp / LED  is on
     blinking,           // lamp / LED  is blinking
     flashing,           // lamp / LED  is flashing
 };
 
-//******************************** L I G H T  T O W E R   S T A E  *******************************//
+//******************************** L I G H T  T O W E R   S T A T E  *******************************//
 struct light_tower_Status_t {                                // Light Tower Status 
-  Lamp_LED_Mode red_lamp;
-  Lamp_LED_Mode orange_lamp;
-  Lamp_LED_Mode green_lamp;
+  GPIO_Output_Mode red_lamp;
+  GPIO_Output_Mode orange_lamp;
+  GPIO_Output_Mode green_lamp;
 } light_tower_Status ;

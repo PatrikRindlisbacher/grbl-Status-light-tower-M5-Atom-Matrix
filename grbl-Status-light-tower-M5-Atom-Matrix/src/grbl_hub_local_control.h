@@ -1,10 +1,20 @@
 #include <Arduino.h>
 
+// **********************  T I M E R  F O R  B L I N K  & F L A S H **********************//
+void update_blink_and_flash(){
+
+}
+
+// **********************  Determine current GPIO state **********************//
+
+bool current_GPIO_Output_State(){
+
+}
 
 // *************************** L O C A L  G P I O   U P D A T E  *************************//
 void grbl_status_to_gpio_update(){
-  if (grbl_hub_config.pin_MIST_ON_Info_Output !=0){                                                             // if defines the connection for MIST Gpio Output
-
+  if (grbl_hub_config.pin_Light_Tower_red !=0){                                                             // if defines the connection for MIST Gpio Output
+    digitalWrite(grbl_hub_config.pin_Light_Tower_red, HIGH);          //
   }
 }
 

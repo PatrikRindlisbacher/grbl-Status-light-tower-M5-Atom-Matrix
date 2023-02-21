@@ -10,3 +10,4 @@ struct grbl_hub_pin_config_t {                                // Alle Pin Variab
   int8_t pin_Light_Tower_orange = 0;                          // GPIO Pin Light Tower orange
   int8_t pin_Light_Tower_green = 0;                           // GPIO Pin Light Tower green
  } grbl_hub_config ;
+

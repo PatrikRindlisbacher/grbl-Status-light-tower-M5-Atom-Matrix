@@ -17,7 +17,7 @@
 
 **Signal Light Tower by default**
 * Idle = green on
-* Alarm = red on
+* Alarm = red flashing
 * Checkmode = red blinking
 * Run = orange on
 * Hold = orange on and red flashing

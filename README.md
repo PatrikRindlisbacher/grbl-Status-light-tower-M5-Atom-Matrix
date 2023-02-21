@@ -12,6 +12,16 @@
 * Each LED has 4 modes: OFF, ON, Blinking, Flashing. (still at work)
 * Status: Idle, Run, Jog, Homing, Hold, Alarm, Door, Sleep
 
+**Signal Light Tower by default**
+* Idle = green on
+* Alarm = red on
+* Checkmode = red blinking
+* Run = orange on
+* Hold = orange on & red flashing
+*Jog = orange blinking
+* SafetyDoor = red flashing
+* Sleep = all off
+* Config Alarm = red blinking
 
 **Connect**
 * Connect RX to TX and TX to RX (M5 crossed to CNC)

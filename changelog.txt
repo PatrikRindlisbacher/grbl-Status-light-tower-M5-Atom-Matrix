@@ -1,5 +1,6 @@
 **The project is still in progress --> Ideas, praise and criticism welcome**
 
+21.02.2023 new function grbl_status_to_gpio_update
 21.02.2023 GPIO_Output_Mode universal for all Outputs
 21.02.2023 Lamp_LED_Mode universal for all LED & Lamp
 21.02.2023 new file grbl_light_tower.h

@@ -15,6 +15,7 @@ void setup() {                                                  // SETUP
   uart_to_usb_setup();                                          // Setup for UART on USB Local 
   uart_cnc_setup();                                             // Setup for UART to CNC 
   m5_atom_matrix_setup();                                       // Setup M5 Atom Matrix
+  grbl_staus_to_gpio_setup();                                   // Setup Local Output Pins
 }
 
 void loop() {                                                    // Loop

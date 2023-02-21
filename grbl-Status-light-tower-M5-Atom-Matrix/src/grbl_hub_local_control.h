@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+// *************************** L O C A L  G P I O   U P D A T E  *************************//
 void grbl_staus_to_gpio_update(){
   if (grbl_hub_config.pin_MIST_ON_Info_Output !=0){                                                             // if defines the connection for MIST Gpio Output
 

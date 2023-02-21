@@ -1,18 +1,18 @@
 #include <Arduino.h>
-// ***********************************  Maschine Typ  ************************************//
-Message_Type grbl_Message_Type(String grbl_message){                                              // message Type find out
-  grbl_message.toUpperCase();                                                                     // message to Upper Case
-  if (grbl_message.startsWith("<")){return Message_Type::reportData ;}                            // start with ok        --> Return 1 = OK  
+// ***********************************  Message Typ  ************************************//
+Message_Type grbl_Message_Type(String grbl_message){                                     // find out the message Type 
+  grbl_message.toUpperCase();                                                            // message to Upper Case
+  if (grbl_message.startsWith("<")){return Message_Type::reportData ;}                   // start with "<"  Message_Type --> reportData        
   else {return Message_Type::none; }   
 }
 // *************************** Current Maschine State  ************************************//
-State grbl_Maschine_State(String grbl_message){                                                    // Return message typ an int
-  grbl_message.toUpperCase();                                                                     // message to Upper Case
-  if (grbl_message.startsWith("<IDLE")){return State::Idle ;}                                                   // start with ok        --> Return 1 = OK  
+State grbl_Maschine_State(String grbl_message){                                            // Return Maschine as State
+  grbl_message.toUpperCase();                                                              // message to Upper Case
+  if (grbl_message.startsWith("<IDLE")){return State::Idle ;}                              // start with ok        --> Return 1 = OK  
   else if (grbl_message.startsWith("<HOMING")){return State::Homing;}                                               // start with chevrons  --> Return 2 = Real-time status report data
-  else if (grbl_message.startsWith("<RUN")){return State::Run;}                                               // start with chevrons  --> Return 2 = Real-time status report data
-  else if (grbl_message.startsWith("<JOG")){return State::Jog;}                                          // start with ALARM:    --> Return 3 = Alarm$
-  else if (grbl_message.startsWith("<HOLD")){return State::Hold;}                                          // start with ALARM:    --> Return 3 = Alarm
+  else if (grbl_message.startsWith("<RUN")){return State::Run;}                            // start with chevrons  --> Return 2 = Real-time status report data
+  else if (grbl_message.startsWith("<JOG")){return State::Jog;}                            // start with ALARM:    --> Return 3 = Alarm$
+  else if (grbl_message.startsWith("<HOLD")){return State::Hold;}                          // start with ALARM:    --> Return 3 = Alarm
   else if (grbl_message.startsWith("<DOOR")){return State::SafetyDoor;}                                          // start with ALARM:    --> Return 3 = Alarm
   else if (grbl_message.startsWith("<ALARM")){return State::Alarm;}                                          // start with ALARM:    --> Return 3 = Alarm
   else if (grbl_message.startsWith("<SLEEP")){return State::Sleep;}                                          // start with error:    --> Return 4 = error

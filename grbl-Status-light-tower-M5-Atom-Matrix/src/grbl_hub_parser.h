@@ -32,18 +32,18 @@ void grbl_Message_main_parser(){                                                
     uart_cnc_read_raw.Message_Typ = grbl_Message_Type(uart_cnc_read_raw.Message);           // find out the message Type
     if (uart_cnc_read_raw.Message_Typ == Message_Type::reportData){                         // if reportData
       Maschine_State.State_current = grbl_Maschine_State(uart_cnc_read_raw.Message);        // find out the Maschine State
-    }
-    uart_cnc_read_raw.Message_Available = false;                                            // 
-    uart_cnc_read_raw.Message = "";
-    uart_cnc_read_raw.last_string_reveive_millis= millis();
-    uart_cnc_read_raw.heart_beat_current = !uart_cnc_read_raw.heart_beat_current;
-  };
+    }                                                                                       //
+    uart_cnc_read_raw.Message_Available = false;                                            // message is processed
+    uart_cnc_read_raw.Message = "";                                                         // delete current message
+    uart_cnc_read_raw.last_string_reveive_millis= millis();                                 // Last message reveive_millis
+    uart_cnc_read_raw.heart_beat_current = !uart_cnc_read_raw.heart_beat_current;           // heartbeat for UART Communication
+  };                                                                                        //
 }
 
-// *************************** Request to the CNC controller  ************************************//
-void grbl_status_update_request(){
-  if (uart_cnc_read_raw.last_grbl_status_update + 500 < millis()){
-    Serial2.print("?");  
-    uart_cnc_read_raw.last_grbl_status_update= millis();
+// ************************** Request to the CNC controller  *******************************//
+void grbl_status_update_request(){                                                          // status request
+  if (uart_cnc_read_raw.last_grbl_status_update + 500 < millis()){                          // all 500ms
+    Serial2.print("?");                                                                     // send ? to the CNC Controller
+    uart_cnc_read_raw.last_grbl_status_update = millis();                                   // notice last request
   }
 }

@@ -3,4 +3,5 @@
 21.02.2023 Start with Lamp Mode OFF, ON, Blinking, Flashing.
 21.02.2023 Start with the Light Tower Function
 20.02.2023 M5 Atom Matrix State Display
+20.02.2023 continuous sending of character ? to CNC Controller
 20.02.2023 Initial version

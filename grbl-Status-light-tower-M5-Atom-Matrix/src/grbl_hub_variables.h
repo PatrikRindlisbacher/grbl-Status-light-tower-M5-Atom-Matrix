@@ -28,6 +28,7 @@ enum class Message_Type : uint8_t {
   startup,            // >G54G20:ok : The open chevron indicates startup line execution. The :ok suffix shows it executed correctly without adding an unmatched ok response on a new line.
 };
 
+//******************************** R A W   D A T A  G R B L  M E S S A G E  **********************//
 struct raw_uart_cnc_read_t {                                                                      // Alle Status Variablen 
   String  Message = "";   
   boolean Message_Available = false;
@@ -39,12 +40,15 @@ struct raw_uart_cnc_read_t {                                                    
   bool heart_beat_last = false;
  } uart_cnc_read_raw ;
 
+//******************************** M A S C H I N E  S T A T E  ***********************************//
 struct Maschine_State_t {                                                                         // Maschine Status Information
   State State_current = State::Sleep;
   State State_old = State::Sleep;                                                                 // Maschine State Number
   String  Machine_State_String = "";                                                              // Maschine State Text
 }Maschine_State ;
 
- struct light_tower_Status_t {                                // Light Tower Status 
 
- } light_tower_Status ;
+//******************************** L I G H T  T O W E R   S T A E  *******************************//
+struct light_tower_Status_t {                                // Light Tower Status 
+
+} light_tower_Status ;

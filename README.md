@@ -10,15 +10,14 @@
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
 * Shown 3 (or more) Status on the Light-Tower (still at work)
 * Each LED has 4 modes: OFF, ON, Blinking, Flashing. (still at work)
-* Status: Idle, Run, Jog, Homing, Hold, Alarm, Door, Sleep
 
 **Signal Light Tower by default**
 * Idle = green on
 * Alarm = red on
 * Checkmode = red blinking
 * Run = orange on
-* Hold = orange on & red flashing
-*Jog = orange blinking
+* Hold = orange on and red flashing
+* Jog = orange blinking
 * SafetyDoor = red flashing
 * Sleep = all off
 * Config Alarm = red blinking

@@ -1,5 +1,5 @@
 #include <Arduino.h>
-// **************************************  Message Typ  ************************************//
+// **************************************  Message Typ  ************************************// Message Typ
 Message_Type grbl_Message_Type(String grbl_message){                                        // find out the message Type
   grbl_message.toUpperCase();                                                               // message to Upper Case
   if (grbl_message.startsWith("<")){return Message_Type::reportData ;}                      // start with "<"       Message_Type --> reportData        
@@ -15,7 +15,7 @@ Message_Type grbl_Message_Type(String grbl_message){                            
   else if (grbl_message.startsWith(">")){return Message_Type::startup ;}                    // start with ">"       Message_Type --> startup 
   else {return Message_Type::none; }   
 }
-// **************************** Current Maschine State  ************************************//
+// **************************** Current Maschine State  ************************************// Maschine State
 State grbl_Maschine_State(String grbl_message){                                             // find out the Maschine State
   grbl_message.toUpperCase();                                                               // message to Upper Case
   if (grbl_message.startsWith("<IDLE")){return State::Idle ;}                               // start with <IDLE
@@ -28,7 +28,7 @@ State grbl_Maschine_State(String grbl_message){                                 
   else if (grbl_message.startsWith("<SLEEP")){return State::Sleep;}                         // start with <Sleep
   else {return State::Sleep; }                                                              // Default Sleep
 }
-// ******************************* Message without <>  *************************************//
+// ************************ Message with removed chevrons <>  ******************************// Revise and clean up the message
 String grbl_message_clean_chevrons(String grbl_message){                                    // Remove chevrons and message to Upper Case
   int startPos = grbl_message.indexOf("<");                                                 // Pos <
   int endPos = grbl_message.indexOf(">");                                                   // Pos >
@@ -36,7 +36,7 @@ String grbl_message_clean_chevrons(String grbl_message){                        
   return grbl_message;                                                                      // Return without chevrons
 }                                                                                           //
 
-// ************************************** Main Parser  *************************************//
+// ************************************** Main Parser  *************************************// Main Parser
 void grbl_Message_main_parser(){                                                            // GRBL main Parser 
   if (uart_cnc_read_raw.Message_Available == true) {                                        // Check if raw Message String Available
     uart_cnc_read_raw.Message_Typ = grbl_Message_Type(uart_cnc_read_raw.Message);           // find out the message Type
@@ -50,7 +50,7 @@ void grbl_Message_main_parser(){                                                
   };                                                                                        //
 }
 
-// ************************** Request to the CNC controller  *******************************//
+// ************************** Request to the CNC controller  *******************************// send a "?" character to the controller
 void grbl_status_update_request(){                                                          // status request
   if (uart_cnc_read_raw.last_grbl_status_update + 500 < millis()){                          // all 500ms
     Serial2.print("?");                                                                     // send ? to the CNC Controller

@@ -55,20 +55,20 @@ enum class GPIO_Output_Conditions : uint8_t {                                   
     flashing,                                                                             // GPIO / lamp / LED  is flashing
 };
 
-//******************************** L I G H T  T O W E R   S T A T E  *********************//
+//******************************** L I G H T  T O W E R   S T A T E  *********************// structure type
 struct light_tower_Status_t {                                                             // Light Tower Status 
   GPIO_Output_Conditions red_lamp;                                                        // CONDITION RED 
   GPIO_Output_Conditions orange_lamp;                                                     // CONDITION Organge 
   GPIO_Output_Conditions green_lamp;                                                      // CONDITION Green
-} light_tower_Status ;
+} light_tower_Status ;                                                                    // 
 
 
-//******************************** BLINK & Flash  *******************************//
-struct blink_and_flash_t {                         // All blink_and_flash vars 
-  uint32_t blink_duration_on = 1000;
-  uint32_t blink_duration_off = 1000; 
-  uint32_t flash_duration_on = 100;
-  uint32_t flash_duration_off = 1900; 
-  uint32_t last_blink_start_millis = 0;             // 
-  uint32_t last_flash_start_millis = 0;             //
+//********************* BLINK & Flash for all GPIO's at the same time ********************// structure type
+struct blink_and_flash_t {                                                                // All blink_and_flash vars 
+  uint32_t blink_duration_on = 1000;                                                      // Blink duration ON
+  uint32_t blink_duration_off = 1000;                                                     // Blink duration OFF
+  uint32_t flash_duration_on = 100;                                                       // Flash duration ON
+  uint32_t flash_duration_off = 1900;                                                     // Flash duration OFF
+  uint32_t last_blink_start_millis = 0;                                                   // Last Start Blink
+  uint32_t last_flash_start_millis = 0;                                                   // Last Start Flash
  } blink_and_flash ;

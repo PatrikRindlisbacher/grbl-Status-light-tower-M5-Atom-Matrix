@@ -28,32 +28,32 @@ enum class Message_Type : uint8_t {
   startup,            // >G54G20:ok : The open chevron indicates startup line execution. The :ok suffix shows it executed correctly without adding an unmatched ok response on a new line.
 };
 
-//******************************** R A W   D A T A  G R B L  M E S S A G E  **********************//
-struct raw_uart_cnc_read_t {                                                                      // Alle Status Variablen 
-  String  Message = "";   
-  boolean Message_Available = false;
-  Message_Type Message_Typ = Message_Type::none;                                                  // If a complete string received from GRBL
-  uint32_t last_char_reveive_millis = 0;                                                          // Last Char receive
-  uint32_t last_string_reveive_millis = 0;                                                        // Last String receive
-  uint32_t last_grbl_status_update =0;
-  bool heart_beat_current = false;
-  bool heart_beat_last = false;
+//************************** R A W   D A T A  G R B L  M E S S A G E  ********************//
+struct raw_uart_cnc_read_t {                                                              // Alle Status Variablen 
+  String  Message = "";                                                                   // Message from CNC UART
+  boolean Message_Available = false;                                                      // New Message Available
+  Message_Type Message_Typ = Message_Type::none;                                          // If a complete string received from GRBL
+  uint32_t last_char_reveive_millis = 0;                                                  // Last Char receive
+  uint32_t last_string_reveive_millis = 0;                                                // Last String receive
+  uint32_t last_grbl_status_update = 0;                                                   // Last Status receive
+  bool heart_beat_current = false;                                                        // Heart Beat / Watch Dog
+  bool heart_beat_last = false;                                                           // Heart Beat / Watch Dog
  } uart_cnc_read_raw ;
 
-//******************************** M A S C H I N E  S T A T E  ***********************************//
-struct Maschine_State_t {                                                                         // Maschine Status Information
+//******************************** M A S C H I N E  S T A T E  **************************//
+struct Maschine_State_t {                                                                // Maschine Status Information
   State State_current = State::Sleep;
-  State State_old = State::Sleep;                                                                 // Maschine State Number
-  String  Machine_State_String = "";                                                              // Maschine State Text
+  State State_old = State::Sleep;                                                        // Maschine State Number
+  String  Machine_State_String = "";                                                     // Maschine State Text
 }Maschine_State ;
 
 
 //*************************** G P I O  O U T P U T   M O D E  ***************************//
 enum class GPIO_Output_Mode : uint8_t {
-    off = 0,                              // GPIO / lamp / LED  is off
-    on ,                                  // GPIO / lamp / LED  is on
-    blinking,                             // GPIO / lamp / LED  is blinking
-    flashing,                             // GPIO / lamp / LED  is flashing
+    off = 0,                                                                              // GPIO / lamp / LED  is off
+    on ,                                                                                  // GPIO / lamp / LED  is on
+    blinking,                                                                             // GPIO / lamp / LED  is blinking
+    flashing,                                                                             // GPIO / lamp / LED  is flashing
 };
 
 //******************************** L I G H T  T O W E R   S T A T E  *******************************//

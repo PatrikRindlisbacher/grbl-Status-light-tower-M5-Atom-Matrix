@@ -40,7 +40,7 @@ String grbl_message_clean_chevrons(String grbl_message){                        
 void grbl_Message_main_parser(){                                                            // GRBL main Parser 
   if (uart_cnc_read_raw.Message_Available == true) {                                        // Check if raw Message String Available
     uart_cnc_read_raw.Message_Typ = grbl_Message_Type(uart_cnc_read_raw.Message);           // find out the message Type
-    if (uart_cnc_read_raw.Message_Typ == Message_Type::reportData){                         // if reportData
+    if (uart_cnc_read_raw.Message_Typ == Message_Type::reportData){                         // if Message_Type = reportData
       Maschine_State.State_current = grbl_Maschine_State(uart_cnc_read_raw.Message);        // find out the Maschine State
     }                                                                                       //
     uart_cnc_read_raw.Message_Available = false;                                            // message is processed

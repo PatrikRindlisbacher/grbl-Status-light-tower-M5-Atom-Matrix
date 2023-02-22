@@ -46,32 +46,32 @@ bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){             //
   }
 }
 
-// *************************** L O C A L  G P I O   U P D A T E  *********************//
-void grbl_status_to_gpio_update(){
-  bool GPIO_New_State;
-  if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower RED                                                        // if defines the connection for MIST Gpio Output
+// *************************** L O C A L  G P I O   U P D A T E  *********************// GPIO Update
+void grbl_status_to_gpio_update(){                                                    // Update all Local GPIO's
+  bool GPIO_New_State;                                                                // Variable for the new state
+  if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower RED --> if defined                                                        // if defines the connection for MIST Gpio Output
     GPIO_New_State = current_GPIO_Output_State(light_tower_Status.red_lamp);          // determine the current status
     digitalWrite(grbl_hub_config.pin_Light_Tower_red, GPIO_New_State);                // Set the current Status to GPIO 
   }
-  if (grbl_hub_config.pin_Light_Tower_orange !=0){                                    // Light Tower Oragnge                                                        // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_orange !=0){                                    // Light Tower Oragnge --> if defined                                                        // if defines the connection for MIST Gpio Output
     GPIO_New_State = current_GPIO_Output_State(light_tower_Status.orange_lamp);       // determine the current status
     digitalWrite(grbl_hub_config.pin_Light_Tower_orange, GPIO_New_State);             // Set the current Status to GPIO  
   }
-  if (grbl_hub_config.pin_Light_Tower_green !=0){                                     // Light Tower Green                                                        // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_green !=0){                                     // Light Tower Green --> if defined                                                         // if defines the connection for MIST Gpio Output
     GPIO_New_State = current_GPIO_Output_State(light_tower_Status.green_lamp);        // determine the current status
     digitalWrite(grbl_hub_config.pin_Light_Tower_green, GPIO_New_State);              // Set the current Status to GPIO 
   }
 }
 
-// ***************************** L O C A L  G P I O   S E T U P *********************//
-void grbl_staus_to_gpio_setup(){
-  if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower red                                                                                             // if defines the connection for MIST Gpio Output
+// ***************************** L O C A L  G P I O   S E T U P ********************* // GPIO Setup
+void grbl_staus_to_gpio_setup(){                                                      // Setup all local GPIO's
+  if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower red --> if defined                                                                                            // if defines the connection for MIST Gpio Output
     pinMode(grbl_hub_config.pin_Light_Tower_red, OUTPUT);                             // sets the digital pin as output
   }
-  if (grbl_hub_config.pin_Light_Tower_orange !=0){                                    // Light Tower orange                                                           // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_orange !=0){                                    // Light Tower orange --> if defined                                                           // if defines the connection for MIST Gpio Output
     pinMode(grbl_hub_config.pin_Light_Tower_orange, OUTPUT);                          // sets the digital pin as output
   }
-  if (grbl_hub_config.pin_Light_Tower_green !=0){                                     // Light Tower green                                                           // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_green !=0){                                     // Light Tower green --> if defined                                                           // if defines the connection for MIST Gpio Output
     pinMode(grbl_hub_config.pin_Light_Tower_green, OUTPUT);                           // sets the digital pin as output
   }
 }

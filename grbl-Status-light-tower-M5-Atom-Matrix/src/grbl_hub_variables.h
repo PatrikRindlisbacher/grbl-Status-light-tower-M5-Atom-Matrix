@@ -16,7 +16,7 @@ enum class State : uint8_t {
 enum class Message_Type : uint8_t {
   none = 0,           //  none grbl Message
   reportData,         // < > : Enclosed between chevrons. Contains status report data.
-  intit,              // Grbl X.Xx indicates initialization.
+  init,               // Grbl X.Xx indicates initialization.
   alarm,              // ALARM:x : Indicates an alarm has been thrown. Grbl is now in an alarm state.
   printout,           // $x=val and $Nx=line indicate a settings printout from a $ and $N user query, respectively.
   msg,                // [MSG:] : Indicates a non-queried feedback message.

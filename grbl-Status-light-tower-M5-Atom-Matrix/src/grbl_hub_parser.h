@@ -2,7 +2,17 @@
 // **************************************  Message Typ  ************************************//
 Message_Type grbl_Message_Type(String grbl_message){                                        // find out the message Type
   grbl_message.toUpperCase();                                                               // message to Upper Case
-  if (grbl_message.startsWith("<")){return Message_Type::reportData ;}                      // start with "<"  Message_Type --> reportData        
+  if (grbl_message.startsWith("<")){return Message_Type::reportData ;}                      // start with "<"       Message_Type --> reportData        
+  else if (grbl_message.startsWith("GRBL")){return Message_Type::init ;}                    // start with "Grbl"    Message_Type --> init --> Welcome Message
+  else if (grbl_message.startsWith("ALARM:")){return Message_Type::alarm ;}                 // start with "ALARM:"  Message_Type --> alarm
+  else if (grbl_message.startsWith("$")){return Message_Type::printout ;}                   // start with "$"       Message_Type --> printout
+  else if (grbl_message.startsWith("[MSG:]")){return Message_Type::msg ;}                   // start with "[MSG:]"  Message_Type --> msg
+  else if (grbl_message.startsWith("[GC:]")){return Message_Type::gc ;}                     // start with "[GC:]"   Message_Type --> gc
+  else if (grbl_message.startsWith("[HLP:]")){return Message_Type::hlp ;}                   // start with "[HLP:]"  Message_Type --> hlp
+  else if (grbl_message.startsWith("[G")){return Message_Type::G ;}                         // start with "[G"      Message_Type --> G
+  else if (grbl_message.startsWith("[VER:]")){return Message_Type::ver ;}                   // start with "[VER:]"  Message_Type --> ver
+  else if (grbl_message.startsWith("[ECHO:]")){return Message_Type::echo ;}                 // start with "[ECHO:]" Message_Type --> echo
+  else if (grbl_message.startsWith(">")){return Message_Type::startup ;}                    // start with ">"       Message_Type --> startup 
   else {return Message_Type::none; }   
 }
 // **************************** Current Maschine State  ************************************//

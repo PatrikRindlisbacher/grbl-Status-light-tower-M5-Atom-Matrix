@@ -40,27 +40,26 @@ struct raw_uart_cnc_read_t {                                                    
   bool heart_beat_last = false;                                                           // Heart Beat / Watch Dog
  } uart_cnc_read_raw ;
 
-//******************************** M A S C H I N E  S T A T E  **************************//
-struct Maschine_State_t {                                                                // Maschine Status Information
-  State State_current = State::Sleep;
-  State State_old = State::Sleep;                                                        // Maschine State Number
-  String  Machine_State_String = "";                                                     // Maschine State Text
+//******************************** M A S C H I N E  S T A T E  ************************** //
+struct Maschine_State_t {                                                                 // Maschine Status Information
+  State State_current = State::Sleep;                                                     // Start State Sleep
+  State State_old = State::Sleep;                                                         // Maschine State old
+  String  Machine_State_String = "";                                                      // Maschine State For language translations
 }Maschine_State ;
 
-
-//*************************** G P I O  O U T P U T   M O D E  ***************************//
-enum class GPIO_Output_Mode : uint8_t {
+//********************* G P I O  O U T P U T   C O N D I T I O N S  ********************* //
+enum class GPIO_Output_Conditions : uint8_t {                                             // GPIO CONDITIONS  ON OFF BLINK FLASH
     off = 0,                                                                              // GPIO / lamp / LED  is off
     on ,                                                                                  // GPIO / lamp / LED  is on
     blinking,                                                                             // GPIO / lamp / LED  is blinking
     flashing,                                                                             // GPIO / lamp / LED  is flashing
 };
 
-//******************************** L I G H T  T O W E R   S T A T E  *******************************//
-struct light_tower_Status_t {                                // Light Tower Status 
-  GPIO_Output_Mode red_lamp;
-  GPIO_Output_Mode orange_lamp;
-  GPIO_Output_Mode green_lamp;
+//******************************** L I G H T  T O W E R   S T A T E  *********************//
+struct light_tower_Status_t {                                                             // Light Tower Status 
+  GPIO_Output_Conditions red_lamp;                                                        // CONDITION RED 
+  GPIO_Output_Conditions orange_lamp;                                                     // CONDITION Organge 
+  GPIO_Output_Conditions green_lamp;                                                      // CONDITION Green
 } light_tower_Status ;
 
 

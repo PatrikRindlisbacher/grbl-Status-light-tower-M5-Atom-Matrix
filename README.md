@@ -39,16 +39,16 @@
 * A suitable circuit can be built with the DiY Protokit. (or similar)
 * I will publish a circuit proposal shortly.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
----
+
 **used libraries (Visual Studio Code & PlatformIO / Arduino )**
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
 * FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
-
+  
 The code is easily ported to any Arduino board with hardware UART.
----
+****
 **GBL compatibility**  
 It should support GRBL from the current version 1.1 https://github.com/gnea/grbl/wiki/Grbl-v1.1-Interface
-
+****
 
 **final word**  
 I am happy about every reaction in the [issues](https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/issues).  

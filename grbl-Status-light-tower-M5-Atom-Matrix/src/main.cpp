@@ -1,7 +1,12 @@
-// GRBL 1.1 UART Hub Universal www.cle.ch Patrik Rindlisbacher  (https://github.com/PatrikRindlisbacher/FluidNC-or-GRBL-UART-Gateway-an-IO-Module-)
+// GRBL 1.1 grbl-Status-light-tower-M5-Atom-Matrix  www.cle.ch  Patrik Rindlisbacher  
+https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix
+
 // Reveice all GRBL Status and parse in Status struct Variables
-// Passtrouh bidirectional UART CNC <--> UART USB all Commands & Status
-// GRBL Status to GPIO  // GRBL Status to Display // GRBL Status to ESPNow ... and more
+// continuous sending of character ? to CNC Controller and receive all Status messages from CNC controller
+// grbl Message type recognition, parse message reportData Contents, Provide all values in local variables
+// Shown 8 Status on the display of the Atom Matrix (Colors & Letters) and Shown 3 (or more) Status on the Light-Tower
+// Each GPIO LED has 4 modes: OFF, ON, Blinking, Flashing.
+
 
 #include <Arduino.h>                                            // Arduino Include Header
 #include "grbl_hub_local_config.h"                              // --> Config for all Pin's for your Board!!!!

@@ -9,7 +9,7 @@
 **Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller
 * receive all Status messages from CNC controller
-* Message type recognition
+* grbl Message type recognition
 * parse message reportData Contents
 * Provide all values in loval variables
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)

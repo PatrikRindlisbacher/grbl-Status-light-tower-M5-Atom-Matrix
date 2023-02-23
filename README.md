@@ -10,7 +10,7 @@
 * continuous sending of character ? to CNC Controller
 * receive all Status messages from CNC controller
 * Message type recognition
-* parse message Contents
+* parse message reportData Contents
 * Provide all values in loval variables
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
 * Shown 3 (or more) Status on the Light-Tower 

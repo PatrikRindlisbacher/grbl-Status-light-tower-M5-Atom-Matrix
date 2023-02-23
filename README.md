@@ -50,5 +50,5 @@ The code is easily ported to any Arduino board with hardware UART.
 It should support GRBL from the current version 1.1 https://github.com/gnea/grbl/wiki/Grbl-v1.1-Interface
 
 I am happy about every reaction in the issues.  
-I will write detailed instructions in the next few days. "WIKI"
+I will write detailed instructions in the next few days. "WIKI" https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/wiki
 

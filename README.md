@@ -52,5 +52,4 @@ It should support GRBL from the current version 1.1 https://github.com/gnea/grbl
 
 **final word**  
 I am happy about every reaction in the [issues](https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/issues).  
-I will write detailed instructions in the next few days.  
-[WIKI](https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/wiki)
+I will write detailed instructions in the next few days. [WIKI](https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/wiki)

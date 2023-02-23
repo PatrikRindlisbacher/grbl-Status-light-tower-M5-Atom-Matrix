@@ -49,6 +49,6 @@ The code is easily ported to any Arduino board with hardware UART.
 **GBL compatibility**  
 It should support GRBL from the current version 1.1 https://github.com/gnea/grbl/wiki/Grbl-v1.1-Interface
 
-I am happy about every reaction in the issues or pull request.
+I am happy about every reaction in the issues.
 I will write detailed instructions in the next few days. "WIKI"
 

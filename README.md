@@ -11,7 +11,7 @@
 * receive all Status messages from CNC controller
 * grbl Message type recognition
 * parse message reportData Contents
-* Provide all values in loval variables
+* Provide all values in local variables
 * Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
 * Shown 3 (or more) Status on the Light-Tower 
 * Each LED has 4 modes: OFF, ON, Blinking, Flashing. 

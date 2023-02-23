@@ -2,9 +2,7 @@
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">  
 **This project is the start for more projects like DRO, Pendant, Panel... **
 
-**I'll be working a lot on this project over the next few days. Watch this project in a few days**
-
-**ALL basic functions are ready for testing !!!!**
+**ALL basic functions are ready to work and for testing !!!!**
 
 **Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller

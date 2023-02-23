@@ -31,7 +31,7 @@
 * Depending on the board, the 5V can also be plugged in directly on the CNC board.
 <img width="223" alt="image" src="https://user-images.githubusercontent.com/39780457/220160670-0b9d1765-2e1e-4385-9f77-221070fcda38.png">
  
-**Selection of the UART**
+**Selection of the UART**  
 * If you don't use the USB port, you can use RX & TX directly on the controller.
 * Some boards / Firmwares offer a separate external TTL UART connector (eg FluidNC)
  

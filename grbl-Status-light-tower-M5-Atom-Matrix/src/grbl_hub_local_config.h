@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+#include "M5Atom.h"
+
 //*************** Local P I N   C O N F I G U R A T I O N **********//
 struct grbl_hub_pin_config_t {                                      // All Pin Variables 
   int8_t pin_RXD_Uart_to_cnc = 26;                                  // RXD GPIO 26 grove weiss -->  to Bart Dring 6er CNC Controller  TX or GPIO 13 = TXD

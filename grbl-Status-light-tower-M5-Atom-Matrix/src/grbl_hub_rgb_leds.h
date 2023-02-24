@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "M5Atom.h"
+
 //********************************* M5 Stack Atom Matix Setup ************* //
 void m5_atom_matrix_setup() {                                               // Setup M5 Atom Matrix
   M5.begin(true, false, true);                                              // Init Atom-Matrix(Initialize serial port, LED).  

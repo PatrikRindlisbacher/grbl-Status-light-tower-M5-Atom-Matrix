@@ -1,21 +1,30 @@
 #include <Arduino.h>
 
+//***************************** RGB LED needed Update *************  //
+bool grbl_hub_rgb_led_update_needed(){
 
-//****************************** M5 Stack Atom Matrix Update *************  //
-void m5_atom_matrix_update() {                                              // M5 Atom Display Update
-  bool update_needed = false;                                               // is update needed
   if (uart_cnc_read_raw.last_string_reveive_millis + 1000 < millis()){
     Maschine_State.State_current = State::Alarm;
   }
-  if (uart_cnc_read_raw.heart_beat_current != uart_cnc_read_raw.heart_beat_last){
-    uart_cnc_read_raw.heart_beat_last = uart_cnc_read_raw.heart_beat_current;
-    update_needed = true;
-  }  
+  // if (uart_cnc_read_raw.heart_beat_current != uart_cnc_read_raw.heart_beat_last){
+  //   uart_cnc_read_raw.heart_beat_last = uart_cnc_read_raw.heart_beat_current;
+  //   return true;
+  // }  
   if (Maschine_State.State_old != Maschine_State.State_current){
-    update_needed = true;
     Maschine_State.State_old = Maschine_State.State_current;
     uart_cnc_read_raw.heart_beat_last = uart_cnc_read_raw.heart_beat_current;
+    return true;
   }
+  else {
+      return false;
+  }
+}
+
+
+//****************************** M5 Stack Atom Matrix Update *************  //
+void m5_atom_matrix_update() {                                              // M5 Atom Display Update
+  bool update_needed = grbl_hub_rgb_led_update_needed();                   // is update needed
+
   if (update_needed){
     if (uart_cnc_read_raw.heart_beat_current == true){                            // Heart Beat
       M5.dis.setBrightness(100) ;                                                 // Brightness 100%
@@ -109,6 +118,8 @@ void m5_atom_matrix_update() {                                              // M
     } 
   }
 }
+
+
 
 
 void grbl_hub_rgb_led_update(){

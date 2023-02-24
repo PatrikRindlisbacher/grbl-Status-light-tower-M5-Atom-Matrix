@@ -1,6 +1,6 @@
 **This project is based on GRBL 1.1 for all CNC & 3D printing applications**  
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">  
-**This project is the start for more projects like DRO, Pendant, Panel... **
+**This project is the start for more projects like grbl DRO, Pendant, Panel... **
 
 **ALL functions are ready to work and for testing with M5 Atom Matrix !!!!**  
 Various other boards are also supported.

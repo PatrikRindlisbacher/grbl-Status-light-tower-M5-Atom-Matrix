@@ -2,9 +2,7 @@
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">  
 **This project is the start for more projects like DRO, Pendant, Panel... **
 
-**I'll be working a lot on this project over the next few days. Watch this project in a few days**
-
-**ALL basic functions are ready for testing !!!!**
+**ALL functions are ready to work and for testing !!!!**
 
 **Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller
@@ -33,24 +31,25 @@
 * Depending on the board, the 5V can also be plugged in directly on the CNC board.
 <img width="223" alt="image" src="https://user-images.githubusercontent.com/39780457/220160670-0b9d1765-2e1e-4385-9f77-221070fcda38.png">
  
-**Selection of the UART**
-* If you don't use the USB port, you can use RX & TX directly on the controller.
+**Selection of the UART**  
+* you can use RX & TX directly on the controller. (if you don't use the USB port simultaneously)
 * Some boards / Firmwares offer a separate external TTL UART connector (eg FluidNC)
  
 **Connection signal tower**
 * A suitable circuit can be built with the DiY Protokit. (or similar)
 * I will publish a circuit proposal shortly.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
- 
+
 **used libraries (Visual Studio Code & PlatformIO / Arduino )**
 * M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
 * FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
-
+  
 The code is easily ported to any Arduino board with hardware UART.
-
+****
 **GBL compatibility**  
 It should support GRBL from the current version 1.1 https://github.com/gnea/grbl/wiki/Grbl-v1.1-Interface
+****
 
-I am happy about every reaction in the issues or pull request.
-I will write detailed instructions in the next few days. "WIKI"
-
+**final word**  
+I am happy about every reaction in the [issues](https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/issues).  
+I will write detailed instructions in the next few days. [WIKI](https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/wiki)

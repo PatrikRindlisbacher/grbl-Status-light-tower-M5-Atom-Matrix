@@ -4,7 +4,7 @@
 **This project is the start for more projects like grbl DRO, Wireless Pendant, CNC Panel... **
 
 **ALL functions are ready to work and for testing with M5 Atom Matrix !!!!**  
-Various other boards will also be supported soon.
+The Light Tower is already supported by 3 boards.
 
 **Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller

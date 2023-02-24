@@ -15,8 +15,7 @@
 #include "grbl_hub_parser.h"                                    // Code for GRBL 1.1 Parser to Status struct Variables
 #include "grbl_hub_local_control.h"                             // Code for GRBL 1.1 Status to Local GPIO --> for example LED or Buzzer
 #include "grbl_hub_rgb_leds.h"                                  // ATOM Matrix Include     --> disable for no M5Stack Atom Matrix
-#include "grbl_light_tower.h"                                   // Light Tower Status Code
-
+#include "grbl_hub_light_tower.h"                               // Light Tower Status Code
 
 void setup() {                                                  // SETUP
   uart_to_usb_setup();                                          // Setup for UART on USB Local 

@@ -1,12 +1,5 @@
 #include <Arduino.h>
 
-//********************************* M5 Stack Atom Matix Setup ************* //
-void m5_atom_matrix_setup() {                                               // Setup M5 Atom Matrix
-  M5.begin(true, false, true);                                              // Init Atom-Matrix(Initialize serial port, LED).  
-  delay(50);                                                                // short delay 50ms. 
-  M5.dis.drawpix(12, 0xffffff);                                             // Light the LED with the specified RGB color
-  delay(150);                                                               // delay 150ms. for white Start Pix show
-}
 
 //****************************** M5 Stack Atom Matrix Update *************  //
 void m5_atom_matrix_update() {                                              // M5 Atom Display Update

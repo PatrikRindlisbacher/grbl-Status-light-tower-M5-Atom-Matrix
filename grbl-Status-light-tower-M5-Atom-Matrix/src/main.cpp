@@ -9,7 +9,7 @@
 
 
 #include <Arduino.h>                                            // Arduino Include Header
-#include "grbl_hub_local_config.h"                              // --> Config for all Pin's for your Board!!!!
+#include "grbl_hub_local_config.h"                              // --> Config for all includes & Pin's for your Board!!!!
 #include "grbl_hub_variables.h"                                 // All Variables for GRBL-Hub
 #include "grbl_hub_uart.h"                                      // Code for UART from / to Local Board to USB
 #include "grbl_hub_parser.h"                                    // Code for GRBL 1.1 Parser to Status struct Variables

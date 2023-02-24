@@ -47,7 +47,7 @@ bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){             //
 }
 
 // *************************** L O C A L  G P I O   U P D A T E  *********************// GPIO Update
-void grbl_status_to_gpio_update(){                                                    // Update all Local GPIO's
+void grbl_hub_status_to_gpio_update(){                                                // Update all Local GPIO's
   bool GPIO_New_State;                                                                // Variable for the new state
   if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower RED --> if defined                                                        // if defines the connection for MIST Gpio Output
     GPIO_New_State = current_GPIO_Output_State(light_tower_Status.red_lamp);          // determine the current status

@@ -2,7 +2,7 @@
 
 //******************* L I G H T  T O W E R  S T A T U S  *********************//
 //******Here the machine status is assigned to the GPIO_Output_Conditions ****//
-void light_tower_status_update(){
+void grbl_hub_light_tower_status_update(){
   if (Maschine_State.State_current== State::Idle){                            // Idle = green on
     light_tower_Status.red_lamp=GPIO_Output_Conditions::off;                  // red      GPIO Conditions
     light_tower_Status.orange_lamp=GPIO_Output_Conditions::off;               // orange   GPIO Conditions

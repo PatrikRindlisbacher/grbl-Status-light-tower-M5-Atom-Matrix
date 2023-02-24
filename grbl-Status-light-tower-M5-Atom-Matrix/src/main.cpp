@@ -30,12 +30,12 @@ void setup() {                                                  // SETUP
 }
 
 void loop() {                                                    // Loop
-  grbl_status_update_request();                                  // Poll the CNC Controller with ?
+  grbl_hub_status_update_request();                              // Poll the CNC Controller with ?
   uart_usb_read();                                               // read data from USB Uart
   uart_cnc_read();                                               // read data from CNC Uart
-  grbl_Message_main_parser();                                    // Parse GRBL all GRBL Status information's
+  grbl_hub_Message_main_parser();                                // Parse GRBL all GRBL Status information's
   grbl_hub_rgb_led_update();                                     // Update the rgb Led's (one / Matrix / Stripes)
-  light_tower_status_update();                                   // Update the Light Tower Status Veriables
-  grbl_status_to_gpio_update();                                  // Update Local Output Pins
+  grbl_hub_light_tower_status_update();                          // Update the Light Tower Status Veriables
+  grbl_hub_status_to_gpio_update();                              // Update Local Output Pins
 }
 

@@ -37,7 +37,7 @@ String grbl_message_clean_chevrons(String grbl_message){                        
 }                                                                                           //
 
 // ************************************** Main Parser  *************************************// Main Parser
-void grbl_Message_main_parser(){                                                            // GRBL main Parser 
+void grbl_hub_Message_main_parser(){                                                            // GRBL main Parser 
   if (uart_cnc_read_raw.Message_Available == true) {                                        // Check if raw Message String Available
     uart_cnc_read_raw.Message_Typ = grbl_Message_Type(uart_cnc_read_raw.Message);           // find out the message Type
     if (uart_cnc_read_raw.Message_Typ == Message_Type::reportData){                         // if Message_Type = reportData
@@ -51,7 +51,7 @@ void grbl_Message_main_parser(){                                                
 }
 
 // ************************** Request to the CNC controller  *******************************// send a "?" character to the controller
-void grbl_status_update_request(){                                                          // status request
+void grbl_hub_status_update_request(){                                                          // status request
   if (uart_cnc_read_raw.last_grbl_status_update + 500 < millis()){                          // all 500ms
     Serial2.print("?");                                                                     // send ? to the CNC Controller
     uart_cnc_read_raw.last_grbl_status_update = millis();                                   // notice last request

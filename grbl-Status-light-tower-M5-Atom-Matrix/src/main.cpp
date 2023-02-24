@@ -19,9 +19,9 @@
 
 void setup() {                                                  // SETUP
   grbl_hub_board_setup();                                       // Hardware Base setup for the different boards
+  grbl_hub_status_to_gpio_setup();                              // Setup Local Output Pins
   uart_to_usb_setup();                                          // Setup for UART on USB Local 
   uart_cnc_setup();                                             // Setup for UART to CNC 
-  grbl_hub_status_to_gpio_setup();                              // Setup Local Output Pins
 }
 
 void loop() {                                                    // Loop
@@ -29,7 +29,7 @@ void loop() {                                                    // Loop
   uart_usb_read();                                               // read data from USB Uart
   uart_cnc_read();                                               // read data from CNC Uart
   grbl_Message_main_parser();                                    // Parse GRBL all GRBL Status information's
-  m5_atom_matrix_update();                                       // Update the M5 Matrix Display
+  grbl_hub_rgb_led_update();                                     // Update the rgb Led's (one / Matrix / Stripes)
   light_tower_status_update();                                   // Update the Light Tower Status Veriables
   grbl_status_to_gpio_update();                                  // Update Local Output Pins
 }

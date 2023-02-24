@@ -109,3 +109,9 @@ void m5_atom_matrix_update() {                                              // M
     } 
   }
 }
+
+
+void grbl_hub_rgb_led_update(){
+  // RGB_LED_5x5
+  m5_atom_matrix_update();
+}

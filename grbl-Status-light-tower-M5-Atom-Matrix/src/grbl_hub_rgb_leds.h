@@ -2,7 +2,6 @@
 
 //***************************** RGB LED needed Update *************  //
 bool grbl_hub_rgb_led_update_needed(){
-
   if (uart_cnc_read_raw.last_string_reveive_millis + 1000 < millis()){
     Maschine_State.State_current = State::Alarm;
   }
@@ -20,18 +19,52 @@ bool grbl_hub_rgb_led_update_needed(){
   }
 }
 
+//****************************** RGB Led 5x5  Matrix Update ******************* // 1x1 Matrix RGB Led (M5 Atom-Lite)
+#ifdef RGB_LED_1x1
+void rgb_led_1x1_matrix_update() {                                              // RGB Led update
+  if (Maschine_State.State_current == State::Idle){                             // Idle
+    M5.dis.drawpix(0,0x00ff00);
+  }
+  else if(Maschine_State.State_current == State::Alarm){                        // Alarm
+    M5.dis.drawpix(0,0xff0000);
+  }
+  else if(Maschine_State.State_current == State::CheckMode){                    // Checkmode
+    M5.dis.drawpix(0,0xff0000);
+  }
+  else if(Maschine_State.State_current == State::Homing){                       // Homing
+    M5.dis.drawpix(0,0xffaa00);
+  }
+  else if(Maschine_State.State_current == State::Run){                          // Run
+    M5.dis.drawpix(0,0xffaa00);
+  }
+  else if(Maschine_State.State_current == State::Hold){                         // Hold
+    M5.dis.drawpix(0,0xffaa00);
+  }
+  else if(Maschine_State.State_current == State::Jog){                          // Jog
+    M5.dis.drawpix(0,0xffaa00);
+  }
+  else if(Maschine_State.State_current == State::SafetyDoor){                   // SafetyDoor
+    M5.dis.drawpix(0,0xff0000);
+  }
+  else if(Maschine_State.State_current == State::Sleep){                        // Sleep
+    M5.dis.drawpix(0,0x000000);
+  }
+  else if(Maschine_State.State_current == State::ConfigAlarm){                  // ConfigAlarm
+    M5.dis.drawpix(0,0xff0000);
+  }
+}
+#endif
 
-//****************************** M5 Stack Atom Matrix Update *************  //
-void m5_atom_matrix_update() {                                              // M5 Atom Display Update
-  bool update_needed = grbl_hub_rgb_led_update_needed();                   // is update needed
-
-  if (update_needed){
-    if (uart_cnc_read_raw.heart_beat_current == true){                            // Heart Beat
-      M5.dis.setBrightness(100) ;                                                 // Brightness 100%
-    }
-    else {
-      M5.dis.setBrightness(80) ;                                                  // Brightness 80%
-    }
+//****************************** RGB Led 5x5  Matrix Update **************  // 5x5 Matrix RGB Led (M5 Atom-Matrix)
+#ifdef RGB_LED_5x5
+void rgb_led_5x5_matrix_update() {                                          // RGB Led update
+                                                   // 
+    // if (uart_cnc_read_raw.heart_beat_current == true){                            // Heart Beat
+    //   M5.dis.setBrightness(100) ;                                                 // Brightness 100%
+    // }
+    // else {
+    //   M5.dis.setBrightness(80) ;                                                  // Brightness 80%
+    // }
     
     if (Maschine_State.State_current == State::Idle){                             // Idle
       M5.dis.clear();                                                             // Clear Display Matrix
@@ -117,12 +150,15 @@ void m5_atom_matrix_update() {                                              // M
       M5.dis.fillpix(0xff0000);                                                   // Fill Matrix Color
     } 
   }
-}
+#endif
 
-
-
-
-void grbl_hub_rgb_led_update(){
-  // RGB_LED_5x5
-  m5_atom_matrix_update();
+void grbl_hub_rgb_led_update(){                                             // rgb LED update
+  bool update_needed = grbl_hub_rgb_led_update_needed();                    // is led update needed
+  if (update_needed){                                                       // LED Update needed 
+    #ifdef RGB_LED_5x5                                                      // BuiltFlag RGB_LED_5x5
+      rgb_led_5x5_matrix_update();                                          // Update 5x5 Led Matrix
+    #elif defined(RGB_LED_1x1)                                              // BuiltFlag RGB_LED_5x5
+      rgb_led_1x1_matrix_update();                                          // Update 1x1 Led
+    #endif                                                                  // 
+  }
 }

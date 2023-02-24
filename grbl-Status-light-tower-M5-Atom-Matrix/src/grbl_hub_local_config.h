@@ -29,22 +29,28 @@ void m5_atom_matrix_setup() {                                         // Setup M
 void m5_atom_lite_setup() {                                           // Setup M5 Atom Matrix
   M5.begin(true, false, true);                                        // Init Atom-Matrix(Initialize serial port, LED).  
   delay(50);                                                          // short delay 50ms. 
-  M5.dis.drawpix(1, 0xffffff);                                        // Light the LED with the specified RGB color
+  M5.dis.drawpix(0, 0xffffff);                                        // Light the LED with the specified RGB color
   delay(150);                                                         // delay 150ms. for white Start Pix show
 }
 #endif
 
+#ifdef BOARD_M5_ATOM_PSRAM_LCD                                        // if Built Flag = BOARD_M5_ATOM_PSRAM_LCD
+void m5_atom_psram_lcd_setup() {                                           // Setup M5 Atom Matrix
+  M5.begin(true, false, true);                                        // Init Atom-Matrix(Initialize serial port, LED).  
+  delay(50);                                                          // short delay 50ms. 
+  M5.dis.drawpix(0, 0xffffff);                                        // Light the LED with the specified RGB color
+  delay(150);                                                         // delay 150ms. for white Start Pix show
+}
+#endif
 //****************************** Board  Setup ************************//
 void grbl_hub_board_setup() {                                         // Setup Hardware
 #ifdef BOARD_M5_ATOM_MATRIX
   m5_atom_matrix_setup();
 #elif defined(BOARD_M5_ATOM_LITE) 
   m5_atom_lite_setup();
+#elif defined(BOARD_M5_ATOM_PSRAM_LCD) 
+  m5_atom_psram_lcd_setup();
 #else  
 // //...
 #endif
-  
-  
-  
-
 }

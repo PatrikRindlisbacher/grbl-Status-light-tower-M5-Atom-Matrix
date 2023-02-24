@@ -1,5 +1,6 @@
 **The project is still in progress --> Ideas, praise and criticism welcome**
 
+24.02.2023 heartbeat temporarily disabled
 24.02.2023 variants of rgb LEDs (one / Matrix / Stripes) --> on work
 24.02.2023 redesign for different board setup's
 24.02.2023 first Pin's as debug Flag in Platformio.ini

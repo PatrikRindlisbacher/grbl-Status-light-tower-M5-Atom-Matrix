@@ -9,9 +9,9 @@ struct grbl_hub_pin_config_t {                                      // All Pin V
   int8_t pin_Info_Output_Spindle_ON = 0;                            // GPIO Pin Info Spindel ON
   int8_t pin_Info_Output_MIST_ON = 0;                               // GPIO Pin Info MIST  Cooling (Nebel)
   int8_t pin_Info_Output_FLOOD_ON = 0;                              // GPIO Pin Info Flood Cooling (Kühlwasser-Flut)
-  int8_t pin_Light_Tower_red = 19;                                  // GPIO Pin Light Tower red
-  int8_t pin_Light_Tower_orange = 23;                               // GPIO Pin Light Tower orange
-  int8_t pin_Light_Tower_green = 33;                                // GPIO Pin Light Tower green
+  int8_t pin_Light_Tower_red = FLAG_PIN_LIGHT_TOWER_RED;            // GPIO Pin Light Tower red
+  int8_t pin_Light_Tower_orange = FLAG_PIN_LIGHT_TOWER_ORANGE;      // GPIO Pin Light Tower orange
+  int8_t pin_Light_Tower_green = FLAG_PIN_LIGHT_TOWER_GREEN;        // GPIO Pin Light Tower green
  } grbl_hub_config ;
 
 //********************************* M5 Stack Atom Matix Setup ************* //

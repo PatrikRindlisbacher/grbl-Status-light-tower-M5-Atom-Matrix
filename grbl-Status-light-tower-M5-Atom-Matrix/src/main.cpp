@@ -7,6 +7,11 @@
 // Shown 8 Status on the display of the Atom Matrix (Colors & Letters) and Shown 3 (or more) Status on the Light-Tower
 // Each GPIO LED has 4 modes: OFF, ON, Blinking, Flashing.
 
+//*******************************************************************************************
+// I have many more extensions planned. DRO / Wireless Pendant / CNC Panel 
+// Give me FEEDBACK. I'm happy to help if you have any questions or problems
+// https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/issues
+//*******************************************************************************************
 
 #include <Arduino.h>                                            // Arduino Include Header
 #include "grbl_hub_local_config.h"                              // --> Config for all includes & Pin's for your Board!!!!

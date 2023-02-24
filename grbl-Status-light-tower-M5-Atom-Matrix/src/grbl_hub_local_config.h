@@ -21,3 +21,8 @@ void m5_atom_matrix_setup() {                                               // S
   M5.dis.drawpix(12, 0xffffff);                                             // Light the LED with the specified RGB color
   delay(150);                                                               // delay 150ms. for white Start Pix show
 }
+
+//********************************* Board  Setup ************************** //
+void grbl_hub_board_setup() {                                               // Setup Hardware
+  m5_atom_matrix_setup();
+}

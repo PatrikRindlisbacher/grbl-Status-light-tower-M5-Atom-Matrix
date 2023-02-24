@@ -18,10 +18,10 @@
 #include "grbl_hub_light_tower.h"                               // Light Tower Status Code
 
 void setup() {                                                  // SETUP
+  grbl_hub_board_setup();                                       // Hardware Base setup for the different boards
   uart_to_usb_setup();                                          // Setup for UART on USB Local 
   uart_cnc_setup();                                             // Setup for UART to CNC 
-  m5_atom_matrix_setup();                                       // Setup M5 Atom Matrix
-  grbl_staus_to_gpio_setup();                                   // Setup Local Output Pins
+  grbl_hub_status_to_gpio_setup();                              // Setup Local Output Pins
 }
 
 void loop() {                                                    // Loop

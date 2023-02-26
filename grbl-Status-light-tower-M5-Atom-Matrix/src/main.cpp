@@ -16,7 +16,7 @@
 #include "grbl_hub_includes.h"                                  // All includes are in a separate file. Partially controlled via Platfomio.ini Build_Flags
 
 void setup() {                                                  // SETUP
-  grbl_hub_board_setup();                                       // Hardware Base setup for the different boards
+  grbl_hub_board_setup();                                       // Hardware Base setup                  Partially controlled via Platfomio.ini Build_Flags
   grbl_hub_status_to_gpio_setup();                              // Setup Local Output Pins
   uart_to_usb_setup();                                          // Setup for UART on USB Local 
   uart_cnc_setup();                                             // Setup for UART to CNC 

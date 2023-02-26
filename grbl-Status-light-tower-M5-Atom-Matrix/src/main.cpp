@@ -13,14 +13,7 @@
 // https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/issues
 //*******************************************************************************************
 
-#include <Arduino.h>                                            // Arduino Include Header
-#include "grbl_hub_local_config.h"                              // --> Config for all includes & Pin's for your Board!!!!
-#include "grbl_hub_variables.h"                                 // All Variables for GRBL-Hub
-#include "grbl_hub_uart.h"                                      // Code for UART from / to Local Board to USB
-#include "grbl_hub_parser.h"                                    // Code for GRBL 1.1 Parser to Status struct Variables
-#include "grbl_hub_local_control.h"                             // Code for GRBL 1.1 Status to Local GPIO --> for example LED or Buzzer
-#include "grbl_hub_rgb_leds.h"                                  // ATOM Matrix Include     --> disable for no M5Stack Atom Matrix
-#include "grbl_hub_light_tower.h"                               // Light Tower Status Code
+#include "grbl_hub_includes.h"                                  // All includes are in a separate file. Partially controlled via Platfomio.ini Build_Flags
 
 void setup() {                                                  // SETUP
   grbl_hub_board_setup();                                       // Hardware Base setup for the different boards

@@ -65,13 +65,13 @@ void grbl_hub_status_to_gpio_update(){                                          
 
 // ***************************** L O C A L  G P I O   S E T U P ********************* // GPIO Setup
 void grbl_hub_status_to_gpio_setup(){                                                 // Setup all local GPIO's
-  if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower red --> if defined                                                                                            // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_red !=0){                                       // Light Tower red --> if is defined                                                                                            // if defines the connection for MIST Gpio Output
     pinMode(grbl_hub_config.pin_Light_Tower_red, OUTPUT);                             // sets the digital pin as output
   }
-  if (grbl_hub_config.pin_Light_Tower_orange !=0){                                    // Light Tower orange --> if defined                                                           // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_orange !=0){                                    // Light Tower orange --> if is defined                                                           // if defines the connection for MIST Gpio Output
     pinMode(grbl_hub_config.pin_Light_Tower_orange, OUTPUT);                          // sets the digital pin as output
   }
-  if (grbl_hub_config.pin_Light_Tower_green !=0){                                     // Light Tower green --> if defined                                                           // if defines the connection for MIST Gpio Output
+  if (grbl_hub_config.pin_Light_Tower_green !=0){                                     // Light Tower green --> if is defined                                                           // if defines the connection for MIST Gpio Output
     pinMode(grbl_hub_config.pin_Light_Tower_green, OUTPUT);                           // sets the digital pin as output
   }
 }

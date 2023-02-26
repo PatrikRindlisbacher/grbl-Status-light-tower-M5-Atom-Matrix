@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include "M5Atom.h"
 
 // All constants "FLAG_" are in the PlatformIO.ini as Debug_Flag defined.
 //*************** Local P I N   C O N F I G U R A T I O N ************//
@@ -34,8 +33,9 @@ void m5_atom_lite_setup() {                                           // Setup M
 }
 #endif
 
+//************************ M5 Stack Atom-PSRAM Setup *****************// M5 ATOM PSRAM_LCD
 #ifdef BOARD_M5_ATOM_PSRAM_LCD                                        // if Built Flag = BOARD_M5_ATOM_PSRAM_LCD
-void m5_atom_psram_lcd_setup() {                                           // Setup M5 Atom Matrix
+void m5_atom_psram_lcd_setup() {                                      // Setup M5 Atom PSRAM LCD
   M5.begin(true, false, true);                                        // Init Atom-Matrix(Initialize serial port, LED).  
   delay(50);                                                          // short delay 50ms. 
   M5.dis.drawpix(0, 0xffffff);                                        // Light the LED with the specified RGB color

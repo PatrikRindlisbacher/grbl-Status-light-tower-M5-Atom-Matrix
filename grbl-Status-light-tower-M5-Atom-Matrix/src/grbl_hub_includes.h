@@ -1,21 +1,20 @@
 #include <Arduino.h>                                                            // Arduino Include Header
 
-
-// ******************************** Board dependent includes *******************//
+// ********************** Board / Projekts dependent includes *******************//
 //***************************** M5 Stack Atom-Matrix Setup *********************// M5 ATOM MATRIX
 #ifdef BOARD_M5_ATOM_MATRIX                                                     // if Built Flag = BOARD_M5_ATOM_MATRIX
-#include "M5Atom.h"
-#endif
+#include "M5Atom.h"                                                             // M5 Stack ATOM lib
+#endif                                                                          // ***********
 
 //****************************** M5 Stack Atom-Lite Setup **********************// M5 ATOM LITE
 #ifdef BOARD_M5_ATOM_LITE                                                       // if Built Flag = BOARD_M5_ATOM_LITE
-#include "M5Atom.h"
-#endif
+#include "M5Atom.h"                                                             // M5 Stack ATOM lib
+#endif                                                                          // ***********
 
 //********************************* M5 Stack Atom-PSRAM Setup ******************// M5 ATOM PSRAM_LCD
 #ifdef BOARD_M5_ATOM_PSRAM_LCD                                                  // if Built Flag = BOARD_M5_ATOM_PSRAM_LCD
-#include "M5Atom.h"
-#endif
+#include "M5Atom.h"                                                             // M5 Stack ATOM lib
+#endif                                                                          // ***********
 
 // ******************************** Indlude for all Boards / Projekts ********* //
 #include "grbl_hub_local_config.h"                                              // --> Config for all includes & Pin's for your Board!!!!

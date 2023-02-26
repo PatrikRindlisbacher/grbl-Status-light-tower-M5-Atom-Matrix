@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-// **********************  T I M E R  F O R  B L I N K   ***********************// Timer
-bool GPIO_state_blink(){                                                        // Timer for Blink
+// **********************  T I M E R  F O R  GPIO  B L I N K  ******************// Timer
+bool GPIO_state_blink(){                                                        // Timer for Blink on GPIO
   if ( millis() > blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on + blink_and_flash.blink_duration_off){
     blink_and_flash.last_blink_start_millis = millis();                         // notice the aktual start cycle millis
     return HIGH;                                                                // Response GPIO High
@@ -13,8 +13,8 @@ bool GPIO_state_blink(){                                                        
     return LOW;                                                                 // Response GPIO Low
   }
 }
-// **********************  T I M E R  F O R   F L A S H ************************// Timer
-bool GPIO_state_flash(){                                                        // Timer for Flash
+// **********************  T I M E R  F O R  GPIO  F L A S H *******************// Timer
+bool GPIO_state_flash(){                                                        // Timer for Flash on GPIO
   if ( millis() > blink_and_flash.last_flash_start_millis + blink_and_flash.flash_duration_on + blink_and_flash.flash_duration_off){
     blink_and_flash.last_flash_start_millis= millis();                          // notice the aktual start cycle millis
     return HIGH;                                                                // Response GPIO High

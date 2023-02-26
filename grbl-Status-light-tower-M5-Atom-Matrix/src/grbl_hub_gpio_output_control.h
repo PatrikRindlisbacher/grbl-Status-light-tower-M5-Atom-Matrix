@@ -28,17 +28,17 @@ bool GPIO_state_flash(){                                                        
 }
 
 // **********************  Determine current GPIO state ************************// GPIO State
-bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){               // Determine current GPIO state
-  if (GPIO_Mode == GPIO_Output_Conditions::off){                                // if OFF
+bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){               // Determine current GPIO state (off / on / Blink / flash)
+  if (GPIO_Mode == GPIO_Output_Conditions::off){                                // if Condition OFF
     return LOW;                                                                 // current LOW 
   }
-  else if (GPIO_Mode == GPIO_Output_Conditions::on){                            // if ON
+  else if (GPIO_Mode == GPIO_Output_Conditions::on){                            // if Condition ON
     return HIGH;                                                                // current HIGH
   }
-  else if (GPIO_Mode == GPIO_Output_Conditions::blinking){                      // if blinking slow
+  else if (GPIO_Mode == GPIO_Output_Conditions::blinking){                      // if Condition blinking slow
     return GPIO_state_blink();                                                  // Determine Blink Condition
   }
-  else if (GPIO_Mode == GPIO_Output_Conditions::flashing){                      // if flashing short 
+  else if (GPIO_Mode == GPIO_Output_Conditions::flashing){                      // if Condition flashing short 
     return GPIO_state_flash();                                                  // Determine Flash Condition
   }
   else {

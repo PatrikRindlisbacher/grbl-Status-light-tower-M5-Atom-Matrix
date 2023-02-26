@@ -1,48 +1,48 @@
 #include <Arduino.h>
 
-// **********************  T I M E R  F O R  B L I N K   *********************// Timer
-bool GPIO_state_blink(){                                                      // Timer for Blink
+// **********************  T I M E R  F O R  B L I N K   ***********************// Timer
+bool GPIO_state_blink(){                                                        // Timer for Blink
   if ( millis() > blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on + blink_and_flash.blink_duration_off){
-    blink_and_flash.last_blink_start_millis = millis();                       // notice the aktual start cycle millis
-    return HIGH;                                                              // Response GPIO High
+    blink_and_flash.last_blink_start_millis = millis();                         // notice the aktual start cycle millis
+    return HIGH;                                                                // Response GPIO High
   }
   if (millis() < blink_and_flash.last_blink_start_millis + blink_and_flash.blink_duration_on){
-    return HIGH;                                                              // Response GPIO High
+    return HIGH;                                                                // Response GPIO High
   }
   else {
-    return LOW;                                                               // Response GPIO Low
+    return LOW;                                                                 // Response GPIO Low
   }
 }
-// **********************  T I M E R  F O R   F L A S H **********************// Timer
-bool GPIO_state_flash(){                                                      // Timer for Flash
+// **********************  T I M E R  F O R   F L A S H ************************// Timer
+bool GPIO_state_flash(){                                                        // Timer for Flash
   if ( millis() > blink_and_flash.last_flash_start_millis + blink_and_flash.flash_duration_on + blink_and_flash.flash_duration_off){
-    blink_and_flash.last_flash_start_millis= millis();                        // notice the aktual start cycle millis
-    return HIGH;                                                              // Response GPIO High
+    blink_and_flash.last_flash_start_millis= millis();                          // notice the aktual start cycle millis
+    return HIGH;                                                                // Response GPIO High
   }
   if (millis() < blink_and_flash.last_flash_start_millis + blink_and_flash.flash_duration_on){
-    return HIGH;                                                              // Response GPIO High
+    return HIGH;                                                                // Response GPIO High
   }
   else {
-    return LOW;                                                               // Response GPIO Low
+    return LOW;                                                                 // Response GPIO Low
   }
 }
 
-// **********************  Determine current GPIO state **********************// GPIO State
-bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){             // Determine current GPIO state
-  if (GPIO_Mode == GPIO_Output_Conditions::off){                              // if OFF
-    return LOW;                                                               // current LOW 
+// **********************  Determine current GPIO state ************************// GPIO State
+bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){               // Determine current GPIO state
+  if (GPIO_Mode == GPIO_Output_Conditions::off){                                // if OFF
+    return LOW;                                                                 // current LOW 
   }
-  else if (GPIO_Mode == GPIO_Output_Conditions::on){                          // if ON
-    return HIGH;                                                              // current HIGH
+  else if (GPIO_Mode == GPIO_Output_Conditions::on){                            // if ON
+    return HIGH;                                                                // current HIGH
   }
-  else if (GPIO_Mode == GPIO_Output_Conditions::blinking){                    // if blinking slow
-    return GPIO_state_blink();                                                // Determine Blink Condition
+  else if (GPIO_Mode == GPIO_Output_Conditions::blinking){                      // if blinking slow
+    return GPIO_state_blink();                                                  // Determine Blink Condition
   }
-  else if (GPIO_Mode == GPIO_Output_Conditions::flashing){                    // if flashing short 
-    return GPIO_state_flash();                                                // Determine Flash Condition
+  else if (GPIO_Mode == GPIO_Output_Conditions::flashing){                      // if flashing short 
+    return GPIO_state_flash();                                                  // Determine Flash Condition
   }
   else {
-    return LOW;                                                               // On program error LOW
+    return LOW;                                                                 // On program error LOW
   }
 }
 

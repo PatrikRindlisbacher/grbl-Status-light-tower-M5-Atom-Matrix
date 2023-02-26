@@ -19,7 +19,7 @@ bool grbl_hub_rgb_led_update_needed(){                                          
   }
 }
 
-//****************************** RGB Led 5x5  Matrix Update **********************// 1x1 Matrix RGB Led (M5 Atom-Lite)
+//****************************** RGB Led 5x5  Matrix Update **********************// 1x1 Matrix RGB Led (--> M5 Atom-Lite)
 #ifdef RGB_LED_1x1                                                                // Built Flag --> RGB_LED_1x1
 void rgb_led_1x1_matrix_update() {                                                // RGB Led update
   if (Maschine_State.State_current == State::Idle){                               // Idle
@@ -55,7 +55,7 @@ void rgb_led_1x1_matrix_update() {                                              
 }
 #endif
 
-//****************************** RGB Led 5x5  Matrix Update **********************// 5x5 Matrix RGB Led (M5 Atom-Matrix)
+//****************************** RGB Led 5x5  Matrix Update **********************// 5x5 Matrix RGB Led (-->  M5 Atom-Matrix)
 #ifdef RGB_LED_5x5
 void rgb_led_5x5_matrix_update() {                                                // RGB Led update
                                                    // 

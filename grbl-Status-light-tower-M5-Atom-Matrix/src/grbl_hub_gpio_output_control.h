@@ -27,7 +27,7 @@ bool GPIO_state_flash(){                                                        
   }
 }
 
-// **********************  Determine current GPIO state ************************// GPIO State
+// **********************  Determine current GPIO state ************************// GPIO State according to Output Conditions
 bool current_GPIO_Output_State(GPIO_Output_Conditions GPIO_Mode){               // Determine current GPIO state (off / on / Blink / flash)
   if (GPIO_Mode == GPIO_Output_Conditions::off){                                // if Condition OFF
     return LOW;                                                                 // current LOW 

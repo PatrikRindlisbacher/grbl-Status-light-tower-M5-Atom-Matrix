@@ -5,8 +5,7 @@
 
 **New Version** Date 28.02.2023 without M5 Lib's  - > for Universal ESP32
 
-**ALL functions are ready to work ad for testing with M5 Atom Matrix !!!!**  
-The Light Tower is already supported by 4 M5 ESP32 boards.
+**The Light Tower is already supported by 4 M5Stack ESP32 boards.**
 
 **Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller

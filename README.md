@@ -3,7 +3,7 @@
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">  
 **This project is the start for more projects like grbl DRO, Wireless Pendant, CNC Panel... **
 
-** NEUE Version in Arbeit ** Stand 28.02.2023  
+**NEUE Version in Arbeit** Stand 28.02.2023 ohne M5 Lib's
 
 **ALL functions are ready to work ad for testing with M5 Atom Matrix !!!!**  
 The Light Tower is already supported by 3 boards.

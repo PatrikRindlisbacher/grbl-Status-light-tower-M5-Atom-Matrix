@@ -19,7 +19,7 @@ Message_Type grbl_Message_Type(String grbl_message){                            
 State grbl_Maschine_State(String grbl_message){                                             // find out the Maschine State
   grbl_message.toUpperCase();                                                               // message to Upper Case
   if (grbl_message.startsWith("<IDLE")){return State::Idle ;}                               // start with <IDLE
-  else if (grbl_message.startsWith("<HOMING")){return State::Homing;}                       // start with <Homing
+  else if (grbl_message.startsWith("<HOME")){return State::Homing;}                         // start with <HOME
   else if (grbl_message.startsWith("<RUN")){return State::Run;}                             // start with <Run
   else if (grbl_message.startsWith("<JOG")){return State::Jog;}                             // start with <Jog
   else if (grbl_message.startsWith("<HOLD")){return State::Hold;}                           // start with <Hold
@@ -52,7 +52,7 @@ void grbl_hub_Message_main_parser(){                                            
 
 // ************************** Request to the CNC controller  *******************************// send a "?" character to the controller
 void grbl_hub_status_update_request(){                                                      // status request
-  if (uart_cnc_read_raw.last_grbl_status_update + 500 < millis()){                          // all 500ms
+  if (uart_cnc_read_raw.last_grbl_status_update + 250 < millis()){                          // all 250ms
     Serial2.print("?");                                                                     // send ? to the CNC Controller
     uart_cnc_read_raw.last_grbl_status_update = millis();                                   // notice last request
   }

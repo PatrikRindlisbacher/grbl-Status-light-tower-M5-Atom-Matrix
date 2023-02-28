@@ -13,13 +13,10 @@
 // https://github.com/PatrikRindlisbacher/grbl-Status-light-tower-M5-Atom-Matrix/issues
 //*******************************************************************************************
 
-#include "grbl_hub_includes.h"                                  // All includes are in a separate file. Partially controlled via Platfomio.ini Build_Flags
+#include "grbl_hub_includes.h"                                  // All includes are in a separate file. --> Partially controlled via Platfomio.ini Build_Flags
 
 void setup() {                                                  // SETUP
-  grbl_hub_board_setup();                                       // Hardware Base setup                  Partially controlled via Platfomio.ini Build_Flags
-  grbl_hub_status_to_gpio_setup();                              // Setup Local Output Pins
-  uart_to_usb_setup();                                          // Setup for UART on USB Local 
-  uart_cnc_setup();                                             // Setup for UART to CNC 
+  grbl_hub_board_setup();                                       // Hardware Base setup                  --> Partially controlled via Platfomio.ini Build_Flags
 }
 
 void loop() {                                                    // Loop
@@ -30,5 +27,6 @@ void loop() {                                                    // Loop
   grbl_hub_rgb_led_update();                                     // Update the rgb Led's (one / Matrix / Stripes)
   grbl_hub_light_tower_status_update();                          // Update the Light Tower Status Veriables
   grbl_hub_status_to_gpio_update();                              // Update Local Output Pins
+  grbl_hub_display_update();                                     // Update Display if available       --> Partially controlled via Platfomio.ini Build_Flags
 }
 

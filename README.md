@@ -45,6 +45,7 @@
 
 **used libraries (Visual Studio Code & PlatformIO / Arduino )**  
 All libraries are automatically installed with PlatformIO  
+All important parameters are controlled via the Platformio.ini.  
   
 The code is easily ported to any Arduino board with hardware UART.
 ****

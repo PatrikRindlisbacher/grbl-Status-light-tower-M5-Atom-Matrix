@@ -44,7 +44,7 @@ The Light Tower is already supported by 3 boards.
 * I will publish a circuit proposal shortly.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
 
-**used libraries (Visual Studio Code & PlatformIO / Arduino )**
+**used libraries (Visual Studio Code & PlatformIO / Arduino )**  
 All libraries are automatically installed with PlatformIO  
   
 The code is easily ported to any Arduino board with hardware UART.

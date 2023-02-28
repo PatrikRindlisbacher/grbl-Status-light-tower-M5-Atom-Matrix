@@ -3,10 +3,10 @@
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">  
 **This project is the start for more projects like grbl DRO, Wireless Pendant, CNC Panel... **
 
-**NEUE Version in Arbeit** Stand 28.02.2023 ohne M5 Lib's  - > Universal ESP32
+**New Version** Date 28.02.2023 without M5 Lib's  - > for Universal ESP32
 
 **ALL functions are ready to work ad for testing with M5 Atom Matrix !!!!**  
-The Light Tower is already supported by 3 boards.
+The Light Tower is already supported by 4 M5 ESP32 boards.
 
 **Flow of functions: (grbl Light-Tower  Controller)**
 * continuous sending of character ? to CNC Controller
@@ -14,7 +14,7 @@ The Light Tower is already supported by 3 boards.
 * grbl Message type recognition
 * parse message reportData Contents
 * Provide all values in local variables
-* Shown **8 Status** on the display of the Atom Matrix (Colors & Letters)
+* Shown **8 Status** on the display of the Atom Matrix (3 or more Colors)
 * Shown 3 (or more) Status on the Light-Tower 
 * Each LED has 4 modes: OFF, ON, Blinking, Flashing. 
 

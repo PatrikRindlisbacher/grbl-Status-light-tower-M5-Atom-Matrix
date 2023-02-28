@@ -45,8 +45,7 @@ The Light Tower is already supported by 3 boards.
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/39780457/220189643-b8c80646-0ddd-4f3d-9b02-51f869ac9268.png">
 
 **used libraries (Visual Studio Code & PlatformIO / Arduino )**
-* M5Atom https://github.com/m5stack/M5Atom?utm_source=platformio&utm_medium=piohome
-* FastLED https://github.com/FastLED/FastLED?utm_source=platformio&utm_medium=piohome
+All libraries are automatically installed with PlatformIO
   
 The code is easily ported to any Arduino board with hardware UART.
 ****

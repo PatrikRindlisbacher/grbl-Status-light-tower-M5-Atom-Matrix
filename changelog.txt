@@ -1,5 +1,6 @@
 **The project is still in progress --> Ideas, praise and criticism welcome**
 
+28.02.2023 NEUE Version in Arbeit ohne M5 Lib's - > Universal ESP32
 26.02.2023 Add M5 Core Fire for testing Input's
 26.02.2023 Start with local GPIO inputs for Button's
 24.02.2023 Board dependent includes --> via PlatdormIO Build Flags

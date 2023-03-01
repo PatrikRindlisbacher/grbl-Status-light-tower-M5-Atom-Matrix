@@ -14,9 +14,9 @@ void ui_anzeige_setup(){                                                        
   lcd.init();
   lcd.setRotation(1);
   lcd.setBrightness(128);
-  tftSprite.setColorDepth(8);     // 4ビット(16色)パレットモードに設定
-  tftSprite.createSprite(320, 240);
-  tftSprite.setFont(&FreeSans12pt7b);                                                           // Schiftart
+  tftSprite.setColorDepth(8);                                                                   // Color Depth
+  tftSprite.createSprite(320, 240);                                                             // !! Sprite ??x??
+  tftSprite.setFont(&FreeSans12pt7b);                                                           // Font
 #endif
 }
 

@@ -54,7 +54,7 @@ bool grbl_hub_rgb_led_update_needed(){                                          
   }
 }
 
-//****************************** RGB Led 1x10  Matrix Update *********************// LED STRIPE All the same Collor
+//****************************** RGB Led Stripe Update **************************// LED STRIPE All the same Collor
 #ifdef RGB_LED_STRIPE_ONE_COLOR                                                   // Built Flag --> RGB_LED_STRIPE_ONE_COLOR
 void rgb_led_stripe_one_Color_update() {                                          // RGB Led update
   if (Maschine_State.State_current == State::Idle){                               // Idle

@@ -1,3 +1,4 @@
+All projects will be hosted on https://github.com/grbl-io in the future
 
 **This project is based on ESP32 & GRBL 1.1 for all CNC & 3D printing applications**  
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/39780457/220300378-d39288d2-21e3-41ca-96fb-3849ed2d68d9.png">  
